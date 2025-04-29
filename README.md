@@ -30,4 +30,4 @@ This repository contains my completed coursework and projects for the IBM AI Eng
 
 ## 🧠 About the Certificate
 
-The **IBM AI Engineer Professional Certificate** is an in-depth program focusing on machine learning, deep learning, and AI tools, culminating in a final capstone project. The certificate is designed to equip learners with the skills needed to become AI engineers, with an emphasis on hands-on learning through projects and
+The **IBM AI Engineer Professional Certificate** is an in-depth program focusing on machine learning, deep learning, and AI tools, culminating in a final capstone project. The certificate is designed to equip learners with the skills needed to become AI engineers, with an emphasis on hands-on learning through projects.
