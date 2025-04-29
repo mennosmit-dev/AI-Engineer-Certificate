@@ -18,8 +18,8 @@ By the end of this course, you will be able to:
 
 ## 📂 Contents
 
-- `project_1.ipynb`: A basic machine learning pipeline project using Scikit-learn.
-- `project_2_model_evaluation.ipynb`: Focuses on evaluating different ML models and comparing their performance.
+- `simple_linear_regression.py`: Simple Linear Regression, predicting co2 omission for car  (part 1).
+- ``: Focuses on evaluating different ML models and comparing their performance.
 
 ---
 
