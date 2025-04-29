@@ -1,4 +1,4 @@
- Using simple Linear Regression to predict co2 omission for a car (part 1).
+"""Using simple Linear Regression to predict co2 omission for a car (part 1)."""
 
 !pip install numpy==2.2.0
 !pip install pandas==2.2.3
