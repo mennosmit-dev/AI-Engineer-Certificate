@@ -19,8 +19,9 @@ By the end of this course, you will be able to:
 ## 📂 Contents: The coding projects I worked on.
 
 - `simple_linear_regression.py`: Using simple Linear Regression to predict co2 omission for a car (part 1).
-- `mulitple-linear-regression`: Predicting co2 omission for car using several features simulateneously. (part 2)
-
+- `mulitple-linear-regression`: Predicting co2 omission for car using several features simulateneously. (part 2) 
+- `logistic_regression`: Predicting churn of customers in telecommunications company.
+- 
 ---
 
 ## 🔧 Tools and Libraries
