@@ -21,6 +21,7 @@ By the end of this course, you will be able to:
 - `simple_linear_regression.py`: Using simple Linear Regression to predict co2 omission for a car (part 1).
 - `mulitple-linear-regression`: Predicting co2 omission for car using several features simulateneously. (part 2) 
 - `logistic_regression`: Predicting churn of customers in telecommunications company.
+- `multi_class_classification.py`: Multi-Class Classification: building the OvsAll, OvsO and mulinomial logistic regressions for obesitas level prediction.
 - 
 ---
 
