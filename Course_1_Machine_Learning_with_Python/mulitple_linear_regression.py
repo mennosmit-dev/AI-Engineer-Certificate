@@ -1,4 +1,4 @@
-Predicting co2 omission for car using several features simulateneously (part 2).
+"""Predicting co2 omission for car using several features simulateneously (part 2)."""
 
 !pip install numpy==2.2.0
 !pip install pandas==2.2.3
