@@ -29,6 +29,7 @@ By the end of this course, you will be able to:
 - `random__forests__xgboost.py`: Utilising Random Forest and XGBoost to predict housing prices. Evaluating both algorithms accuracy and speed.
 - `k-means-customer-seg.py`: Applying K-means for customer segmentation on simulated data simulated and on a real dataset, evaluating results using a colour map.
 - `comparing_dbscan_hdbscan.py`: Comparing DBSCAN to HDBSCAN on clustering art gallaries and musea (WGS84 date, and Web marcator (EPSG:3857)).
+- `pca.py`: (a) projecting 2D data onto prinicpal axis via PCA and (b) exploring 4 dimensional reduction for iris flowers.
 
 
 
