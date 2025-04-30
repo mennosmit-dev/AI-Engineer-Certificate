@@ -6,9 +6,7 @@
 !pip install scikit-learn==1.6.0
 !pip install matplotlib==3.9.3
 
-"""Let's first import required libraries:
-
-"""
+"""Let's first import required libraries:"""
 
 # Commented out IPython magic to ensure Python compatibility.
 import pandas as pd
