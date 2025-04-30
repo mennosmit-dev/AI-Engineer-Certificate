@@ -23,10 +23,7 @@ from sklearn.metrics import mean_squared_error
 import warnings
 warnings.filterwarnings('ignore')
 
-"""<div id="dataset_analysis">
-    <h2>Dataset Analysis</h2>
-</div>
-
+"""
 In this section you will read the dataset in a Pandas dataframe and visualize its content. You will also look at some data statistics.
 
 Note: A Pandas dataframe is a two-dimensional, size-mutable, potentially heterogeneous tabular data structure. For more information: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html.
@@ -47,10 +44,6 @@ correlation_values.plot(kind='barh', figsize=(10, 6))
 
 """This shows us that the input features `payment_type`, `VendorID`, `store_and_fwd_flag` and `improvement_surcharge` have little to no correlation with the target variable.
 
-<div id="dataset_preprocessing">
-    <h2>Dataset Preprocessing</h2>
-</div>
-
 You will now prepare the data for training by applying normalization to the input features.
 """
 
@@ -66,19 +59,13 @@ X = proc_data.values
 # normalize the feature matrix
 X = normalize(X, axis=1, norm='l1', copy=False)
 
-"""<div id="dataset_split">
-    <h2>Dataset Train/Test Split</h2>
-</div>
-
+"""
 Now that the dataset is ready for building the classification models, you need to first divide the pre-processed dataset into a subset to be used for training the model (the train set) and a subset to be used for evaluating the quality of the model (the test set).
 """
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-"""<div id="dt_sklearn">
-    <h2>Build a Decision Tree Regressor model with Scikit-Learn</h2>
-</div>
-
+"""
 Regression Trees are implemented using `DecisionTreeRegressor`.
 
 The important parameters of the model are:
@@ -102,9 +89,7 @@ dt_reg = DecisionTreeRegressor(criterion = 'squared_error',
 
 dt_reg.fit(X_train, y_train)
 
-"""<div id="dt_sklearn_snapml">
-    <h2>Evaluate the Scikit-Learn and Snap ML Decision Tree Regressor Models</h2>
-</div>
+"""
 
 To evaluate our dataset we will use the `score` method of the `DecisionTreeRegressor` object providing our testing data, this number is the $R^2$ value which indicates the coefficient of determination. We will also evaluate the Mean Squared Error $(MSE)$ of the regression output with respect to the test set target values. High $R^2$ and low $MSE$ values are expected from a good regression model.
 """
