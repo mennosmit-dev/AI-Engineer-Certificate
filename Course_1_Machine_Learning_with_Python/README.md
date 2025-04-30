@@ -35,7 +35,8 @@ By the end of this course, you will be able to:
 - `evaluating_random_forest.py`: Implementing a random forest to predict median housing price based on various attributes, evaluating its peformance and feature importance.
 - `evaluating_k_means_clustering.py`: Generating synthetic data, creating k-means models, evaluate their perforamnce, investigate evaluation metrics for interpreting results (intution for the subjective practice of evaluating clustering results), Voronoi diagram.
 - `regularization_in_linearregression.py`: Implementing regularization techniques such as RIDGE, evaluating their impact when there are outliers, select features using LASSO.
-- `ml_pipelines_and_gridsearchcv.py`: Building and evaluating a ML pipeline, building a grid-search implementation, implementing and evaluating a classification using real-world data, extract feature importance.-
+- `ml_pipelines_and_gridsearchcv.py`: Building and evaluating a ML pipeline, building a grid-search implementation, implementing and evaluating a classification using real-world data, extract feature importance.
+- `practice_project`: Predicting whether a passenger of titanic survived based on attributes, implemented using ML Pipeline. Random forest and logistic regression are compared.
 
 
 
