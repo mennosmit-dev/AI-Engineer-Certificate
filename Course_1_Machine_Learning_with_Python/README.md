@@ -27,7 +27,7 @@ By the end of this course, you will be able to:
 - `decision_tree_svm_ccfraud.py`: For the Kaggle Data set 'Credit Card Fraud Detection' with Decision Trees and SVM using python APIs, utilising hinge loss, obtained a SVM ROC-AUC score: 0.986.
 - `knn_classification.py`: KNN for predicting service category telecommunications customers.
 - `random__forests__xgboost.py`: Utilising Random Forest and XGBoost to predict housing prices. Evaluating both algorithms accuracy and speed.
-- `K-Means-Customer-Seg.py`: Applying K-means for customer segmentation on simulated data simulated and on a real dataset, evaluating results using a colour map.
+- `k-means-customer-seg.py`: Applying K-means for customer segmentation on simulated data simulated and on a real dataset, evaluating results using a colour map.
 - 
 
 
