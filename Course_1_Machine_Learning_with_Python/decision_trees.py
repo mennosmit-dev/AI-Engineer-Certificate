@@ -30,10 +30,6 @@ Part of your job is to build a model to find out which drug might be appropriate
 
 It is a sample of a multiclass classifier, and you can use the training part of the dataset to build a decision tree, and then use it to predict the class of an unknown patient or to prescribe a drug to a new patient.
 
-<div id="downloading_data">
-    <h2>Downloading the Data</h2>
-    To download the data, we will use !wget to download it from IBM Object Storage.
-</div>
 """
 
 path= 'https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-ML0101EN-SkillsNetwork/labs/Module%203/data/drug200.csv'
