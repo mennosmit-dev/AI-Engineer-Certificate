@@ -5,9 +5,7 @@
 !pip install scikit-learn==1.6.0
 !pip install matplotlib==3.9.3
 
-"""Now import the required libraries for this lab.
-
-"""
+"""Now import the required libraries for this lab."""
 
 # Commented out IPython magic to ensure Python compatibility.
 import numpy as np
