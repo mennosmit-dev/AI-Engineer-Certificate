@@ -22,7 +22,8 @@ By the end of this course, you will be able to:
 - `mulitple-linear-regression`: Predicting co2 omission for car using several features simulateneously. (part 2) 
 - `logistic_regression`: Predicting churn of customers in telecommunications company.
 - `multi_class_classification.py`: Multi-Class Classification: building the OvsAll, OvsO and mulinomial logistic regressions for obesitas level prediction.
-- 
+- `decision_trees.py`: Building a decision tree for prescribing the correct medical drug.
+- `regression_trees_taxi_tip.py`: Predicting the taxi tip.
 ---
 
 ## 🔧 Tools and Libraries
