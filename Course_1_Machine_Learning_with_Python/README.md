@@ -8,11 +8,12 @@ This course introduces the foundations of machine learning using Python, coverin
 
 By the end of this course, you will be able to:
 
-- Understand and apply supervised learning models such as linear regression, decision trees, and support vector machines (SVM).
-- Implement unsupervised learning algorithms like k-means clustering and hierarchical clustering.
-- Build a basic recommender system using collaborative filtering.
-- Evaluate models using various performance metrics.
-- Use Python libraries like Pandas, Scikit-learn, and Matplotlib to build and evaluate ML models.
+- Understand and implement supervised learning models, including linear and logistic regression, decision trees, support vector machines (SVM), K-nearest neighbors (KNN), random forests, and XGBoost, applying them to real-world problems such as fraud detection, medical prescription, and customer churn.
+- Apply unsupervised learning techniques including K-means, DBSCAN, HDBSCAN, PCA, t-SNE, and UMAP for tasks such as customer segmentation, gallery clustering, and high-dimensional data visualization.
+- Evaluate model performance using metrics such as ROC-AUC, accuracy, confusion matrices, and clustering evaluation techniques including Voronoi diagrams and silhouette scores.
+- Apply regularization techniques (Ridge and LASSO) for regression and feature selection, and build end-to-end machine learning pipelines with hyperparameter tuning using GridSearchCV.
+- Build basic recommender systems and classification models for complex datasets, including Titanic survival prediction and rainfall forecasting, leveraging real-world data and competitive benchmarks.
+-Use Python libraries like Pandas, Scikit-learn, Matplotlib, and Seaborn to process data, build, and evaluate machine learning models effectively and reproducibly.
 
 ---
 
