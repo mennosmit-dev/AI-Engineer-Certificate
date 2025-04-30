@@ -4,10 +4,6 @@
 !pip install scikit-learn==1.6.0
 !pip install matplotlib==3.9.3
 
-"""To import the libraries that will be used in this lab, execute the cells below.
-
-"""
-
 # Commented out IPython magic to ensure Python compatibility.
 # Import the libraries we need to use in this lab
 from __future__ import print_function
@@ -37,10 +33,7 @@ url= "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeve
 raw_data=pd.read_csv(url)
 raw_data
 
-"""<div id="dataset_analysis">
-    <h2>Dataset Analysis</h2>
-</div>
-
+"""
 Each row in the dataset represents a credit card transaction. As shown above, each row has 31 variables. One variable (the last variable in the table above) is called Class and represents the target variable. Your objective will be to train a model that uses the other variables to predict the value of the Class variable. Let's first retrieve basic statistics about the target variable.
 
 Note: For confidentiality reasons, the original names of most features are anonymized V1, V2 .. V28. The values of these features are the result of a PCA transformation and are numerical. The feature 'Class' is the target variable and it takes two values: 1 in case of fraud and 0 otherwise. For more information about the dataset please visit this webpage: https://www.kaggle.com/mlg-ulb/creditcardfraud.
@@ -68,10 +61,6 @@ correlation_values.plot(kind='barh', figsize=(10, 6))
 
 """This clearly shows that some features affect the output Class more than the others. For efficient modeling, we may use only the most correlated features.
 
-<div id="dataset_preprocessing">
-    <h2>Dataset Preprocessing</h2>
-</div>
-
 You will now prepare the data for training. You will apply standard scaling to the input features and normalize them using $L_1$ norm for the training models to converge quickly. As seen in the data snapshot, there is a parameter called `Time` which we will not be considering for modeling. Hence, features 2 to 30 will be used as input features and feature 31, i.e. Class will be used as the target variable.
 """
 
@@ -88,19 +77,13 @@ y = data_matrix[:, 30]
 # data normalization
 X = normalize(X, norm="l1")
 
-"""<div id="dataset_split">
-    <h2>Dataset Train/Test Split</h2>
-</div>
-
+"""
 Now that the dataset is ready for building the classification models, you need to first divide the pre-processed dataset into a subset to be used for training the model (the train set) and a subset to be used for evaluating the quality of the model (the test set).
 """
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-"""<div id="dt_sklearn">
-    <h2>Build a Decision Tree Classifier model with Scikit-Learn</h2>
-</div>
-
+"""
 Compute the sample weights to be used as input to the train routine so that it takes into account the class imbalance present in this dataset.
 """
 
@@ -115,10 +98,7 @@ dt = DecisionTreeClassifier(max_depth=4, random_state=35)
 
 dt.fit(X_train, y_train, sample_weight=w_train)
 
-"""<div id="svm_sklearn">
-    <h2>Build a Support Vector Machine model with Scikit-Learn</h2>
-</div>
-
+"""
 Unlike Decision Trees, we do not need to initiate a separate sample_weight for SVMs. We can simply pass a parameter in the scikit-learn function.
 """
 
@@ -127,10 +107,7 @@ svm = LinearSVC(class_weight='balanced', random_state=31, loss="hinge", fit_inte
 
 svm.fit(X_train, y_train)
 
-"""<div id="dt_sklearn_snapml">
-    <h2>Evaluate the Decision Tree Classifier Models</h2>
-</div>
-
+"""
 Run the following cell to compute the probabilities of the test samples belonging to the class of fraudulent transactions.
 """
 
@@ -144,10 +121,7 @@ The AUC-ROC score evaluates your model's ability to distinguish positive and neg
 roc_auc_dt = roc_auc_score(y_test, y_pred_dt)
 print('Decision Tree ROC-AUC score : {0:.3f}'.format(roc_auc_dt))
 
-"""<div id="svm_sklearn_snap">
-    <h2>Evaluate the Support Vector Machine Models</h2>
-</div>
-
+"""
 Run the following cell to compute the probabilities of the test samples belonging to the class of fraudulent transactions.
 """
 
