@@ -29,4 +29,4 @@ prewritten by IBM.
 
 ## 🧠 About the Certificate
 
-The **IBM AI Engineer Professional Certificate** is an in-depth program focusing on machine learning, deep learning, and AI tools, culminating in a final capstone projects. The certificate is designed to equip learners with the skills needed to become AI engineers, with an emphasis on hands-on learning through projects.
+The **IBM AI Engineer Professional Certificate** is an in-depth program focusing on machine learning, deep learning, and AI tools, culminating in a final capstone projects. The certificate is designed to equip learners with the skills needed to become AI engineers, with an emphasis on hands-on learning through projects[(https://www.coursera.org/professional-certificates/ai-engineer)].
