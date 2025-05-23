@@ -1,9 +1,7 @@
 # IBM AI Engineer Certificate (Coursera)
 
-This repository contains my completed coursework and projects for the IBM AI Engineer Professional Certificate. 
+This repository contains my completed projects for the IBM AI Engineer Professional Certificate. 
 While I am fully aware of PEP8 standards and best practices, please note that some files may not strictly adhere to them. 
-These scripts are primarily based on IBM-designed labs, which were instructional in nature and not originally intended as 
-production-ready or standalone projects — although they can certainly be adapted and extended for such purposes.
 
 ## 📚 Courses
 
