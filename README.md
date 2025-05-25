@@ -26,6 +26,7 @@ prewritten by IBM.
 - TensorFlow / Keras
 - Pandas, NumPy, Matplotlib
 - PyTorch
+- Apache Spark 
 
 ## 🧠 About the Certificate
 
