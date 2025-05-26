@@ -24,7 +24,7 @@ By the end of this course, you will be able to:
 
 The coding projects I worked on:
 
-- ``: 
+- `functional_api`: Applying the functional API to create NNs with different architectures involving dropout layers and batchnormalisation to decrease overfitting and stabilise training.
 - ``:
 - ``:
 - ``:
