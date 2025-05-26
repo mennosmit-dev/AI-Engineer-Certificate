@@ -23,6 +23,7 @@ By the end of this course, you will be able to:
 ---
 
 ## 📂 Contents: The coding projects I worked on  
+- Three projects for building more intuïtion for forward propagation, backpropogation, vanishing gradient, and activation functions (but focus on intuïtion and not applicable directly in real word so left it out).
 - ``: 
 
 ---
