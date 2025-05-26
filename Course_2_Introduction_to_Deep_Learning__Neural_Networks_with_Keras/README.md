@@ -25,7 +25,10 @@ By the end of this course, you will be able to:
 ## 📂 Contents: The coding projects I worked on  
 - Three projects for building more intuïtion for forward propagation, backpropogation, vanishing gradient, and activation functions (but focus on intuïtion and not applicable directly in real word so left it out).
 - `concrete_compressive_strength.py`: Building a regression model in Keras involving multiple hidden layers with ReLu and the Adam optimiser, predicting the total compressive strenght based on attributes.
-
+- `conventionalnn_mnis`: Predicting handrwitten digits in MNIST dataset using a conventional NN. Highest accuracy obtained 0.995 (two hidden layers).
+-
+-
+-
 ---
 
 ## 🔧 Tools and Libraries
