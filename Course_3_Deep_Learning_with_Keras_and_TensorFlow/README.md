@@ -24,7 +24,7 @@ By the end of this course, you will be able to:
 
 The coding projects I worked on:
 
-- `cnn_image_classifier.py`: Example project – classifying images using a custom-built Convolutional Neural Network (CNN). *(placeholder – actual projects will be added here)*
+- ``: 
 - ``:
 - ``:
 - ``:
