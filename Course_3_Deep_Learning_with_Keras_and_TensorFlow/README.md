@@ -38,7 +38,7 @@ The coding projects I worked on:
 - `diffusion_denoise.py`: Using various diffusion model architectures to denoise the MNIST data set. Decreased the validation loss (cross-entropy) from 0.204 (previous decoding_mnist.py) to 0.0996 with the best performing diffusion model.
 - `gan_generation.py`: Building several GANs to generate images.<br>
   <img src="images/gan_train.png" alt="Denoising Images" width="370"/>
-- ` `:
+- `custom_trainingloop_mnist.py`: Production-ready customtrainingloop with additional accuracy metric and custom callbacks logging used for mnist dataset efficient training.
 - ` `:
 - ` `:
 
