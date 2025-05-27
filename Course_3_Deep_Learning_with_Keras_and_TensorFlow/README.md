@@ -37,7 +37,7 @@ The coding projects I worked on:
   <img src="images/mnist_reconstruction.jpg" alt="Denoising Images" width="300"/>
 - `diffusion_denoise.py`: Using various diffusion model architectures to denoise the MNIST data set. Decreased the validation loss (cross-entropy) from 0.204 (previous decoding_mnist.py) to 0.0996 with the best performing diffusion model.
 - `gan_generation.py`: Building several GANs to generate images.<br>
-  <img src="images/gan_train.png" alt="Denoising Images" width="300"/>
+  <img src="images/gan_train.png" alt="Denoising Images" width="370"/>
 - ` `:
 - ` `:
 - ` `:
