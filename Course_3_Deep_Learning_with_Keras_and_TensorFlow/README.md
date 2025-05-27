@@ -35,7 +35,7 @@ The coding projects I worked on:
 - `shakespeare_transformer.py`: Building, training and evaluting a transformer model for generating Shakespearian sonnets. Led to realistic variations of the original work from Shakespeare.
 - `decoding_mnist`: Building and training an autoencoder model to denoise MNIST data set images, finetuning it to improve its performance.<br>
   <img src="images/mnist_reconstruction.jpg" alt="Denoising Images" width="300"/>
-- `diffusion_denoise`: Using different diffusion model architectures to denoise the MNIST data set. Decreased the validation loss (cross-entropy) from 0.204 (previous autoencoder) to 0.0996 with the best performing diffusion model.
+- `diffusion_denoise`: Using various diffusion model architectures to denoise the MNIST data set. Decreased the validation loss (cross-entropy) from 0.204 (previous autoencoder) to 0.0996 with the best performing diffusion model.
 - ` `:
 - ` `:
 - ` `:
