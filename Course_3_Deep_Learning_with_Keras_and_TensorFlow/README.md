@@ -33,7 +33,8 @@ The coding projects I worked on:
 - `building_advanced_ts_transformer.py`: Building an advanced encoder-only transformer model for stock prices time series prediction. Defined the individual parts of the transformer by custom layers. Predictions versus actual:<br>
   <img src="images/stock_forecast_transformer.png" alt="Stock Price Versus Actual" width="300"/>
 - `shakespeare_transformer.py`: Building, training and evaluting a transformer model for generating Shakespearian sonnets. Led to realistic variations of the original work from Shakespeare.
-- ` `:
+- `decoding_mnist`: Building and training an autoencoder model to denoise MNIST data set images, finetuning it to improve its performance.<br>
+  <img src="images/mnist_reconstruction.png" alt="Stock Price Versus Actual" width="300"/>
 - ` `:
 - ` `:
 - ` `:
