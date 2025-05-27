@@ -26,7 +26,8 @@ The coding projects I worked on:
 
 - `functional_api`: Applying the functional API to create NNs with different architectures involving dropout layers and batchnormalisation to decrease overfitting and stabilise training on a randomly generated continious dataset.
 - `custom_layers`: Creating several custom layer architectures involving dropout to cluster randomly generated cluster data.
-- ``:
+- `advanced_data_augmentation`: Applying data augmentation techniques using the ImageDataGenerator, such as rotation, width and height shift, shear, zoom, horizontal flip. Also applying feature-wise and sample-wise normalisation.
+   Finally, implementing a custom preprocessing function to add noise to images.
 - ``:
 - ``:
 - ``:
