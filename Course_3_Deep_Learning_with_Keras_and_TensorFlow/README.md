@@ -29,7 +29,7 @@ The coding projects I worked on:
 - `advanced_data_augmentation.py`: Applying data augmentation techniques using the ImageDataGenerator, such as rotation, width and height shift, shear, zoom, horizontal flip. Also applying feature-wise and sample-wise normalisation.
    Finally, implementing a custom preprocessing function to add noise to images.
 - `transfer_learning_vgg_16.py`: Finetuning the VGG16 to predict the color 'black' or 'white' of the picture (binary_corssentropy). Achieved 100% accuracy.
-- `transpose_convolution_image_reconstruction.py`: Creating, training and evaluating different ranspose convolution layer architectures to reconstruct images. Lowest MSE on synthetic data (0.0018) was obtained under relatively small kernel sizes (but imore computationally expensive)
+- `transpose_convolution_image_reconstruction.py`: Creating, training and evaluating different ranspose convolution layer architectures to reconstruct images. Lowest MSE on synthetic data (0.0018) was obtained under relatively small kernel sizes (but more computationally expensive)
 - ``:
 
 
