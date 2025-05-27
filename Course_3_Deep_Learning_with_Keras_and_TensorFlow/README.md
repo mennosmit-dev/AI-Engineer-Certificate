@@ -24,11 +24,11 @@ By the end of this course, you will be able to:
 
 The coding projects I worked on:
 
-- `functional_api`: Applying the functional API to create NNs with different architectures involving dropout layers and batchnormalisation to decrease overfitting and stabilise training on a randomly generated continious dataset.
-- `custom_layers`: Creating several custom layer architectures involving dropout to cluster randomly generated cluster data.
+- `functional_api`: Applying the functional API to create NNs with different architectures involving dropout and batchnormalisation to decrease overfitting and stabilise training on a randomly generated continious dataset. Best result 54.0% test accuracy.
+- `custom_layers`: Creating several custom layer architectures involving dropout to cluster randomly generated cluster data from 10 classes. Achieved 11.3% accuracy on test data (relatively good as data quite scattered).
 - `advanced_data_augmentation`: Applying data augmentation techniques using the ImageDataGenerator, such as rotation, width and height shift, shear, zoom, horizontal flip. Also applying feature-wise and sample-wise normalisation.
    Finally, implementing a custom preprocessing function to add noise to images.
-- ``:
+- `transfer_learning_vgg_16`: Finetuning the VGG16 to predict the color 'black' or 'white' of the picture (binary_corssentropy). Achieved 100% accuracy.
 - ``:
 - ``:
 
