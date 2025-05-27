@@ -1,0 +1,493 @@
+
+"""
+# Final Project: Classification and Captioning Aircraft Damage Using Pretrained Models
+Estimated time needed: **90** minutes
+"""
+import warnings
+warnings.filterwarnings('ignore')
+
+!pip install pandas==2.2.3
+!pip install tensorflow==2.17.1
+!pip install pillow==11.1.0
+!pip install matplotlib==3.9.2
+!pip install transformers==4.38.2
+!pip install torch
+
+"""#### Suppress the tensorflow warning messages
+We use the following code to  suppress the warning messages due to use of CPU architechture for tensoflow.
+You may want to **comment out** these lines if you are using the GPU architechture
+"""
+import os
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
+"""### Importing Required Libraries
+"""
+import zipfile
+import keras
+from keras.models import Sequential, Model
+from keras.layers import Dense, Dropout, Flatten
+from keras.applications import VGG16
+from keras.optimizers import Adam
+import tensorflow as tf
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+import matplotlib.pyplot as plt
+import numpy as np
+from keras.preprocessing import image
+import random
+
+# Set seed for reproducibility
+seed_value = 42
+random.seed(seed_value)
+np.random.seed(seed_value)
+tf.random.set_seed(seed_value)
+
+"""#### Pretrained Model
+A pretrained model refers to a machine learning model that has already been trained on a large dataset, typically for a specific task, and is ready for use or fine-tuning on a new task or dataset. The key idea behind a pretrained model is that it has already learned useful patterns or features from the data it was trained on, so you don’t need to start from scratch.
+- **ResNet, VGG (Image Classification):** These are pretrained models commonly used for image classification tasks. They have learned from millions of images and can be fine-tuned for specific image-related tasks.
+- **BLIP (Image Captioning and Summarization):** BLIP is a pretrained model that can generate captions and summaries for images. It has already been trained on image-text pairs, so it can easily generate descriptive captions for new images.
+The first step is to load and prepare the dataset of aircraft images. These images are labeled either as 'dent' or 'crack'. We will also split the dataset into training, validation, and test sets.
+Your goal is to train an algorithm on these images and to predict the labels for images in your test set.
+**Define configuration options**
+It's time to define some model configuration options.
+*  Set the **batch size** is set to 32.
+*  Set the **number of epcohs** is 5.
+"""
+#Set the batch size,epochs
+batch_size = 32
+n_epochs = 5
+img_rows, img_cols = 224, 224
+input_shape = (img_rows, img_cols, 3)
+
+"""Extract the Dataset:
+Unzip the dataset to the current directory, creating directories for training, testing, and validation splits.
+"""
+import tarfile
+import urllib.request
+import os
+import shutil
+
+# URL of the tar file
+url = "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/ZjXM4RKxlBK9__ZjHBLl5A/aircraft-damage-dataset-v1.tar"
+
+# Define the path to save the file
+tar_filename = "aircraft_damage_dataset_v1.tar"
+extracted_folder = "aircraft_damage_dataset_v1"  # Folder where contents will be extracted
+
+# Download the tar file
+urllib.request.urlretrieve(url, tar_filename)
+print(f"Downloaded {tar_filename}. Extraction will begin now.")
+
+# Check if the folder already exists
+if os.path.exists(extracted_folder):
+    print(f"The folder '{extracted_folder}' already exists. Removing the existing folder.")
+
+    # Remove the existing folder to avoid overwriting or duplication
+    shutil.rmtree(extracted_folder)
+    print(f"Removed the existing folder: {extracted_folder}")
+
+# Extract the contents of the tar file
+with tarfile.open(tar_filename, "r") as tar_ref:
+    tar_ref.extractall()  # This will extract to the current directory
+    print(f"Extracted {tar_filename} successfully.")
+
+"""The folder structure looks as follows:
+```python
+aircraft_damage_dataset_v1/
+├── train/
+│   ├── dent/
+│   └── crack/
+├── valid/
+│   ├── dent/
+│   └── crack/
+└── test/
+    ├── dent/
+    └── crack/
+```
+
+"""
+# Define directories for train, test, and validation splits, it was already precategorised
+extract_path = "aircraft_damage_dataset_v1"
+train_dir = os.path.join(extract_path, 'train')
+test_dir = os.path.join(extract_path, 'test')
+valid_dir = os.path.join(extract_path, 'valid')
+"""## 1.2 Data Preprocessing
+Create data generators for training, validation, and testing datasets.
+First,we will create ImageDataGenerators used for training, validation and testing.
+The ImageDataGenerator class is part of Keras. It is a powerful utility for real-time image data augmentation, preprocessing, and feeding data into deep learning models during training. This class is particularly useful when working with image datasets that are too large to fit into memory all at once, or when you want to augment your dataset  to improve model generalization.
+We will create instances of the ImageDataGenerator class. Each instance corresponds to one of the datasets: training, validation, and testing.
+"""
+# Create ImageDataGenerators to preprocess the data
+train_datagen = ImageDataGenerator(rescale=1./255)
+valid_datagen = ImageDataGenerator(rescale=1./255)
+test_datagen = ImageDataGenerator(rescale=1./255)
+
+"""Next, we use flow_from_directory() method to load the images from directory and generate the training dataset. The flow_from_directory() method is part of the ImageDataGenerator class in Keras, and it plays a crucial role in automating the process of loading, preprocessing, and batching images for training, validation, and testing.
+We use the train_datagen object to load and preprocess the training images. Specifically, the flow_from_directory() function is used to read images directly from the directory and generate batches of data that will be fed into the model for training.
+"""
+train_generator = train_datagen.flow_from_directory(
+    train_dir,
+    target_size=(img_rows, img_cols),   # Resize images to the size VGG16 expects
+    batch_size=batch_size,
+    seed = seed_value,
+    class_mode='binary',
+    shuffle=True # Binary classification: dent vs crack
+)
+
+"""## **Task 1: Create a `valid_generator` using the `valid_datagen` object**
+Please use the following parameters:
+*   **directory** should be set to `valid_dir`.
+*   **class_mode** should be set to `'binary'`.
+*   **seed** should be set to `seed_value`.
+*   **batch_size** should be set to `batch_size`.
+*   **shuffle** should be set to `False`.
+*   **target_size** should be set to `(img_rows, img_cols)`.
+"""
+valid_generator =  valid_datagen.flow_from_directory(
+    directory= valid_dir,
+    class_mode= 'binary',
+    seed= seed_value,
+    batch_size= batch_size,
+    shuffle= False,
+    target_size= (img_rows, img_cols)
+)
+
+"""## **Task 2: Create a `test_generator` using the `test_datagen` object**
+Please use the following parameters:
+*   **directory** should be set to `test_dir`.
+*   **class_mode** should be set to `'binary'`.
+*   **seed** should be set to `seed_value`.
+*   **batch_size** should be set to `batch_size`.
+*   **shuffle** should be set to `False`.
+*   **target_size** should be set to `(img_rows, img_cols)`.
+"""
+
+test_generator = test_datagen.flow_from_directory(directory = test_dir, class_mode = 'binary', seed = seed_value, batch_size = batch_size, shuffle = False, target_size= (img_rows, img_cols))
+
+"""## 1.3 Model Definition
+Here, we define the model architecture by using a pre-trained VGG16 model as the base, adding custom layers on top for binary classification of 'dent' and 'crack' types of damage.
+## **Task 3: Load the pre-trained model VGG16**
+****Note: Please copy and save the code of the task as it will be required for submission in the final project. Ensure to submit the response as part of your project submission****
+"""
+base_model = VGG16(weights='imagenet', include_top = False, input_shape= (img_rows, img_cols, 3))
+
+"""Now, we modify the VGG16 model for our specific classification task. We extract the output from the last layer of the pre-trained VGG16 model, and then create a new model with this modified output. Then we will freeze the base VGG16 model layers so that their weights will not be updated during training.
+"""
+output = base_model.layers[-1].output
+output = keras.layers.Flatten()(output)
+base_model = Model(base_model.input, output)
+# Freeze the base VGG16 model layers
+for layer in base_model.layers:
+    layer.trainable = False
+
+"""After using VGG16 as a feature extractor, we add our own classifier on top of the VGG16 model. This involves adding fully connected layers (Dense), activation functions (like ReLU), and sometimes Dropout layers to avoid overfitting.
+Here, we are adding two dense layers with 512 units each, followed by a Dropout layer, and finally, a Dense layer with one unit and a sigmoid activation to output the probability for binary classification ("dent" vs "crack").
+"""
+# Build the custom model
+model = Sequential()
+model.add(base_model)
+model.add(Dense(512, activation='relu'))
+model.add(Dropout(0.3))
+model.add(Dense(512, activation='relu'))
+model.add(Dropout(0.3))
+model.add(Dense(1, activation='sigmoid'))
+
+"""## **Task 4: Compile the model**
+You will compile the model using the following parameters:
+*   **loss**: `'binary_crossentropy'`.
+*   **optimizer**: `=Adam(learning_rate=0.0001)`.
+*   **metrics**: `['accuracy']`.
+"""
+model.compile(
+    optimizer= Adam(learning_rate=0.0001),
+    loss= 'binary_crossentropy',
+    metrics= ['accuracy']
+)
+
+"""## 1.4 Model Training
+- This section covers the process of training the model using the prepared dataset.
+## Task 5: Model Training
+Now that the model is compiled, you can train it using the .fit() method. This step involves passing in the training and validation datasets along with the number of epochs you want to train the model for.
+You will train the model using the following parameters:
+*   **train_data**: `train_generator`
+*   **epochs**: `n_epochs`
+*   **validation_data**: `valid_generator`
+Hint: Use `model.fit()` to train the model:
+**Note: Please copy and save the code of the task as it will be required for submission in the final project. Ensure to submit the response as part of your project submission**
+"""
+history = model.fit(
+    train_generator,
+    epochs=n_epochs,
+    validation_data=valid_generator,
+)
+# Access the training history
+train_history = model.history.history  # After training
+
+"""## 1.5 Visualizing Training Results
+- After training the model, we visualize the training and validation accuracy and loss to understand the model's learning process.
+### Plot loss curves for training and validation sets
+"""
+# Plot the loss for both training and validation
+plt.title("Training Loss")
+plt.ylabel("Loss")
+plt.xlabel('Epoch')
+plt.plot(train_history['loss'])
+plt.show()
+plt.title("Validation Loss")
+plt.ylabel("Loss")
+plt.xlabel('Epoch')
+plt.plot(train_history['val_loss'])
+plt.show()
+
+"""## Task 6: Plot accuracy curves for training and validation sets
+"""
+plt.figure(figsize=(5, 5))
+plt.title('Accuracy Curve')
+plt.xlabel('Epochs')
+plt.ylabel('Accuracy')
+plt.plot(train_history['accuracy'], label = 'Training Accuracy')
+plt.plot(train_history['val_accuracy'], label = 'Validation Accuracy')
+plt.legend()
+
+"""## 1.6 Model Evaluation
+Now we evaluate the trained model on the test dataset. Calculates test loss and accuracy by evaluating the test generator. Predictions are made for the test dataset, and the results are compared to true labels.
+"""
+# Evaluate the model on the test set
+test_loss, test_accuracy = model.evaluate(test_generator, steps=test_generator.samples // test_generator.batch_size)
+print(f"Test Loss: {test_loss:.4f}")
+print(f"Test Accuracy: {test_accuracy:.4f}")
+
+""" ## 1.7 Visualizing Predictions
+Display test images alongside their true and predicted labels.
+True labels and predictions are retrieved.
+Images are displayed with labels for visual inspection of model performance.
+"""
+import numpy as np
+import matplotlib.pyplot as plt
+from tensorflow.keras.preprocessing import image
+
+# Function to plot a single image and its prediction
+def plot_image_with_title(image, model, true_label, predicted_label, class_names):
+    plt.figure(figsize=(6, 6))
+    plt.imshow(image)
+
+    # Convert labels from one-hot to class indices if needed, but for binary labels it's just 0 or 1
+    true_label_name = class_names[true_label]  # Labels are already in class indices
+    pred_label_name = class_names[predicted_label]  # Predictions are 0 or 1
+
+    plt.title(f"True: {true_label_name}\nPred: {pred_label_name}")
+    plt.axis('off')
+    plt.show()
+
+# Function to test the model with images from the test set
+def test_model_on_image(test_generator, model, index_to_plot=0):
+    # Get a batch of images and labels from the test generator
+    test_images, test_labels = next(test_generator)
+
+    # Make predictions on the batch
+    predictions = model.predict(test_images)
+
+    # In binary classification, predictions are probabilities (float). Convert to binary (0 or 1)
+    predicted_classes = (predictions > 0.5).astype(int).flatten()
+
+    # Get the class indices from the test generator and invert them to get class names
+    class_indices = test_generator.class_indices
+    class_names = {v: k for k, v in class_indices.items()}  # Invert the dictionary
+
+    # Specify the image to display based on the index
+    image_to_plot = test_images[index_to_plot]
+    true_label = test_labels[index_to_plot]
+    predicted_label = predicted_classes[index_to_plot]
+
+    # Plot the selected image with its true and predicted labels
+    plot_image_with_title(image=image_to_plot, model=model, true_label=true_label, predicted_label=predicted_label, class_names=class_names)
+
+"""## **Task 7: Visualizing the results**
+In this task, you will specify which image from the test dataset to display and test the model on. You will fill in the required values to test your model.
+You will visualize using the following parameters:
+*   **test_data_generator**: `test_generator`.
+*   **model**: `model`.
+*   **index_to_plot**: `1`.
+**NOTE**: Due to the inherent nature of neural networks, predictions may vary from the actual labels. For instance, if the actual label is ‘crack’, the prediction could be either ‘crack’ or ‘dent’, both of which are possible outcomes, and full marks will be awarded for the task.
+"""
+test_model_on_image(test_generator, model, index_to_plot=1)
+
+"""[Part 2: Image Captioning and Summarization using BLIP Pretrained Model]
+BLIP (Bootstrapping Language-Image Pretraining) is an advanced vision-and-language model designed to generate natural language descriptions for images. By leveraging both visual and textual information, BLIP can produce human-readable text that accurately reflects the content and context of an image. It is specifically trained to understand images and their relationships to summarizing text, making it ideal for tasks like image captioning, summarization, and visual question answering.
+In this project, learners will utilize the BLIP model to build a system capable of automatically generating captions and summary for images. The code will integrate the BLIP model within a custom Keras layer. This allows the user to input an image and specify a task, either "caption" or "summary", to receive a textual output that describes or summarizes the content of the image.
+#### Key Steps:
+- **Image Loading and Preprocessing:** The code will begin by loading images from a file path, then converting and processing them into a format suitable for input to the BLIP model.
+- **Text Generation:** Depending on the task, whether generating a caption or summary, the BLIP model will generate corresponding text based on the processed image.
+- **Custom Keras Layer:** A custom Keras layer is a user-defined layer that extends Keras' built-in functionality.Here custom Keras layer will be implemented to wrap the BLIP model. This layer will handle the task-specific processing (captioning or summarizing) and integrate smoothly into a TensorFlow/Keras environment.
+"""
+#Load the required libraries
+import torch
+import tensorflow as tf
+from PIL import Image
+from transformers import BlipProcessor, BlipForConditionalGeneration
+
+"""## 2.1 Loading BLIP Model
+#### Load the BLIP Model and Processor from Hugging Face
+Hugging Face is an open-source platform that provides pre-trained machine learning models, datasets, and tools, primarily focused on natural language processing, computer vision, and other AI tasks. It offers easy access to powerful models through its Transformers library.
+- **BlipProcessor:** This handles the preprocessing of images and text. It converts images to the format that the BLIP model can understand.
+- **BlipForConditionalGeneration:** This is the model itself, responsible for generating captions or summaries based on the processed image.
+"""
+#load the pretrained BLIP processor and model:
+processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
+model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base")
+
+"""#### Custom Keras Layer: BlipCaptionSummaryLayer
+Next, we define a custom `tf.keras.layers.Layer` class that takes in an image and a task input (either caption or summary) and processes the image using the BLIP model. To create a custom Keras layer, we need to subclass `tf.keras.layers.Layer` and implement the required methods.
+#### **BlipCaptionSummaryLayer Class:**
+This custom Keras layer integrates image preprocessing and text generation using a pretrained BLIP model.
+- **`__init__`**: This constructor method initializes the `BlipCaptionSummaryLayer` class by setting up the BLIP processor and model.
+- **`call`**: This method defines the operations or transformations applied to the input data as it passes through the layer.
+- **`process_image`**: The `process_image` method contains the custom logic for loading the image, preprocessing it, generating the text (either a caption or a summary) using the BLIP model, and returning the generated result.
+"""
+
+class BlipCaptionSummaryLayer(tf.keras.layers.Layer):
+    def __init__(self, processor, model, **kwargs):
+        """
+        Initialize the custom Keras layer with the BLIP processor and model.
+
+        Args:
+            processor: The BLIP processor for preparing inputs for the model.
+            model: The BLIP model for generating captions or summaries.
+        """
+        super().__init__(**kwargs)
+        self.processor = processor
+        self.model = model
+
+    def call(self, image_path, task):
+        # Use tf.py_function to run the custom image processing and text generation
+        return tf.py_function(self.process_image, [image_path, task], tf.string)
+
+    def process_image(self, image_path, task):
+        """
+        Perform image loading, preprocessing, and text generation.
+
+        Args:
+            image_path: Path to the image file as a string.
+            task: The type of task ("caption" or "summary").
+
+        Returns:
+            The generated caption or summary as a string.
+        """
+        try:
+            # Decode the image path from the TensorFlow tensor to a Python string
+            image_path_str = image_path.numpy().decode("utf-8")
+
+            # Open the image using PIL and convert it to RGB format
+            image = Image.open(image_path_str).convert("RGB")
+
+            # Set the appropriate prompt based on the task
+            if task.numpy().decode("utf-8") == "caption":
+                prompt = "This is a picture of"  # Modify prompt for more natural output
+            else:
+                prompt = "This is a detailed photo showing"  # Modify for summary
+
+            # Prepare inputs for the BLIP model
+            inputs = self.processor(images=image, text=prompt, return_tensors="pt")
+
+            # Generate text output using the BLIP model
+            output = self.model.generate(**inputs)
+
+            # Decode the output into a readable string
+            result = self.processor.decode(output[0], skip_special_tokens=True)
+            return result
+        except Exception as e:
+            # Handle errors during image processing or text generation
+            print(f"Error: {e}")
+            return "Error processing image"
+
+"""## Task 8: Implement a Helper Function to Use the Custom Keras Layer
+In this task, you will implement a helper function `generate_text` that utilizes the custom `BlipCaptionSummaryLayer` Keras layer to generate captions or summaries for a given image. The function will accept an image path and a task type (caption or summary), process the image using the BLIP model, and return the generated text.
+### **Steps:**
+#### Create the Helper Function `generate_text`:
+The function will accept following parameters:
+* **`image_path`**: The path to the image file (in tensor format).
+* **`task`**: The type of task to perform, which can either be "caption" or "summary" (in tensor format).
+Inside the function:
+1. Create an instance(blip_layer) of the `BlipCaptionSummaryLayer`.
+2. Call this layer with the provided image path and task type.
+3. Return the generated caption or summary as the output.
+**Note: Please copy and save the code of the task as it will be required for submission in the final project. Ensure to submit the response as part of your project submission**
+"""
+def generate_text(image_path, task):
+    blip_layer = BlipCaptionSummaryLayer(processor, model)
+    blip_layer.call(image_path, task)
+    return blip_layer(image_path, task)
+    
+"""
+## 2.2 Generating Captions and Summaries
+Now we use the `generate_text` function to generate a caption and a summary for an image.
+It processes the image and prints the corresponding text output in a human-readable format.
+The function makes it easy to switch between generating captions and summaries based on the task type you provide.</br>
+**Note:** Generated captions/summary may not always be accurate, as the model is limited by its training data and may not fully understand new or specific images.
+"""
+# Path to an example image
+image_path = tf.constant("aircraft_damage_dataset_v1/test/dent/144_10_JPG_jpg.rf.4d008cc33e217c1606b76585469d626b.jpg")  # actual path of image
+# Generate a caption for the image
+caption = generate_text(image_path, tf.constant("caption"))
+# Decode and print the generated caption
+print("Caption:", caption.numpy().decode("utf-8"))
+# Generate a summary for the image
+summary = generate_text(image_path, tf.constant("summary"))
+# Decode and print the generated summary
+print("Summary:", summary.numpy().decode("utf-8"))
+
+"""## Task 9: Generate a caption for an image using the using BLIP pretrained model
+- Use the image_path variable given below to load the image. Run the cell to before proceeding to next step.
+- Use the `generate_text` function to generate a caption for the image.
+- Use the example given in `2.2 Generating Captions and Summaries` for this task
+**Note:** Generated captions may not always be accurate, as the model is limited by its training data and may not fully understand new or specific images.
+**Note: Please copy and save the output of the task as it will be required for submission in the final project. Ensure to submit the response as part of your project submission**
+"""
+# We will use the following image to display Caption and Summary for Task 9 and 10
+# URL of the image
+image_url = "aircraft_damage_dataset_v1/test/dent/149_22_JPG_jpg.rf.4899cbb6f4aad9588fa3811bb886c34d.jpg"
+# Load and display the image
+img = plt.imread(image_url)
+plt.imshow(img)
+plt.axis('off')  # Hide the axis
+plt.show()
+image_path = tf.constant("aircraft_damage_dataset_v1/test/dent/149_22_JPG_jpg.rf.4899cbb6f4aad9588fa3811bb886c34d.jpg")  # actual path of image
+caption = generate_text(image_path, tf.constant("caption"))
+# Decode and print the generated caption
+print("Caption:", caption.numpy().decode("utf-8"))
+
+"""## Task 10: Generate a summary of an image using BLIP pretrained model
+- Use the image_path variable given below to load the image. Run the cell before proceeding to next step.
+- Use the `generate_text` function to generate a caption for the image.
+- Use the example given in `2.2 Generating Captions and Summaries` for this task
+**Note:** Generated summary may not always be accurate, as the model is limited by its training data and may not fully understand new or specific images.
+**Note: Please copy and save the output of the task as it will be required for submission in the final project. Ensure to submit the response as part of your project submission**
+"""
+image_path = tf.constant("aircraft_damage_dataset_v1/test/dent/149_22_JPG_jpg.rf.4899cbb6f4aad9588fa3811bb886c34d.jpg")  # actual path of image
+# Generate a summary for the image
+summary = generate_text(image_path, tf.constant("summary"))
+# Decode and print the generated summary
+print("Summary:", summary.numpy().decode("utf-8"))
+
+"""### Congratulations on completing the final project!
+
+Now, download the file as it will be used for the final grading. Please note that the file should have both code and output of the cells.
+### Steps to download the file:
+1. Click on **File** from the left side of the menu.
+2. Select **Download**.
+![Download Image](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/oNELo6MwGDRaIbnzNgzYRA/download.png)
+## Authors
+Vandana Pandey
+
+### Other Contributors
+
+[Srishti Srivastava](https://www.linkedin.com/in/srishti-srivastava-343095a8/), [Aman Aggarwal](https://www.linkedin.com/in/aggarwal-aman/)
+
+<!--
+## Change log
+| Date (YYYY-MM-DD) | Version | Changed By | Change Description    |
+| ----------------- | ------- | ---------- | --------------------- |
+| 2025-06-23        | 0.1     | Vandana Pandey| Create Lab        |-->
+
+## <h3 align="center"> &#169; IBM Corporation. All rights reserved. <h3/>
+"""

@@ -17,7 +17,7 @@ By the end of this course, you will be able to:
 
 ---
 
-## 📂 Contents: The coding projects I worked on.
+## 📂 Contents: The coding projects I worked on (20 projects).
 
 - `simple_linear_regression.py`: Using simple Linear Regression to predict co2 omission for a car (part 1).
 - `mulitple-linear-regression`: Predicting co2 omission for car using several features simulateneously (part 2).  
