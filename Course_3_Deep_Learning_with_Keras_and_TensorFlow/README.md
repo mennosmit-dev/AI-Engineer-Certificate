@@ -39,7 +39,7 @@ The coding projects I worked on:
 - `gan_generation.py`: Building several GANs to generate images.<br>
   <img src="images/gan_train.png" alt="Denoising Images" width="370"/>
 - `custom_trainingloop_mnist.py`: Production-ready customtrainingloop with additional accuracy metric and custom callbacks logging used for mnist dataset efficient training.
-- ` `:
+- `mnist_hyperparam_tune.py`: Evaluating the optimal learning rate and number of hidden layers using the keras tuner on the mnist dataset with a narrow-architecture. Optimal_Neurons{32,512} = 448, Optimal_lr{1e-04, 1e-02} = 2e-03.
 - ` `:
 
 
