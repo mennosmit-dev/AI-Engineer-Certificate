@@ -39,10 +39,10 @@ By the end of this course, you will be able to:
 - `custom_trainingloop_mnist.py`: Production-ready customtrainingloop with additional accuracy metric and custom callbacks logging used for mnist dataset efficient training.
 - `mnist_hyperparam_tune.py`: Evaluating the optimal learning rate and number of hidden layers using the keras tuner on the mnist dataset with a narrow-architecture. Optimal_Neurons{32,512} = 448, Optimal_lr{1e-04, 1e-02} = 2e-03.
 - `q_learning_agent_cartpole.py`: Setting up a Q-learning agent in cartpole environment and enhancing its performance using various architectures, adaptive exploration schedules and varying goal function agent. Maximum score was 9 steps without failure.
-- `dqn_cartpolev1.py`: Implemented a deep Q-Network in CartPole-v1, approximated Q-values via network(instead of table), trained network using memory, made a replay buffer. Scored a maximum of 43 steps without failure (+ ~400% compared to q_learning_agent_cartpole.py) due to more efficient learning. 
+- `dqn_cartpolev1.py`: Implemented a deep Q-Network in CartPole-v1, approximated Q-values via network(instead of table), trained network using memory, made a replay buffer. Scored a maximum of 43 steps without failure (+ ~400% compared to q_learning_agent_cartpole.py) due to more efficient learning.
+- `detecing_fruits`: Developed a classifcation model to detect fruits, finetuned based on VGG16 model. By fine-tuning increased vaidation accuracy from 58% to 92% meaning rougly 57% increase. Used advanced data augmentation techniques for the supervised part to improve generalisation.
 - `trash_sorting`: Developed a classification model to differentiate betwween recyclable and organic waste based on images. Fine-tuned the VGG16 model for the task which increased the validation accuracy from 84.9% to 92.19% by about 8.6%.
-- ` `:
-- 
+
 ## 🔧 Tools and Libraries
 
 - Python  
