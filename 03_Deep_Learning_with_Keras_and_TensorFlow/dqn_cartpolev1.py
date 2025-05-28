@@ -1,10 +1,12 @@
 """
-# **Lab: Building a Deep Q-Network with Keras**
-## Learning objectives
-By the end of this lab, you will:
-- Implement a Deep Q-Network using Keras  
-- Define and train a neural network to approximate the Q-values  
-- Evaluate the performance of the trained DQN agent
+>>>Implemented a deep Q-Network in CartPole-v1, approximated Q-values via network(instead of table), 
+trained network using memory, made a replay buffer. Scored a maximum of 43 steps without failure 
+(+ ~400% compared to q_learning_agent_cartpole.py) due to more effective learning.
+
+What is done in the code:
+- Implementing a Deep Q-Network using Keras  
+- Defining and training a neural network to approximate the Q-values  
+- Evaluating the performance of the trained DQN agent
 
 #### Step 1: Set up the environment
 """
