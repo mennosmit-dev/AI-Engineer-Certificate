@@ -22,7 +22,7 @@ By the end of this course, you will be able to:
 - `simple_linear_regression.py`: Using simple Linear Regression to predict co2 omission for a car (part 1). Best R-squared 0.68.
 - `mulitple-linear-regression`: Predicting co2 omission for car using several features simulateneously (part 2). Best R-Squared 0.89. 
 - `logistic_regression`: Predicting churn of customers in telecommunications company.
-- <img src="Images/feature_importance.png" alt="Churn_importances" width="100"/> 
+- <img src="Images/feature_importance.png" alt="Churn_importances" width="170"/> 
 - `multi_class_classification.py`: Multi-Class Classification: building the OvsAll, OvsO and mulinomial logistic regressions for obesitas level prediction.
 - `decision_trees.py`: Building a decision tree for prescribing the correct medical drug.
 - `regression_trees_taxi_tip.py`: Predicting the taxi tip. 
