@@ -20,9 +20,7 @@ By the end of this course, you will be able to:
 - Implementing Q-learning and Deep Q-Network to solve reinforcement problems.
 - (Prepare models for deployment by saving/loading, exporting, and understanding TensorFlow SavedModel format.)
 
-## 📂 Contents
-
-The coding projects I worked on (in total **16**):
+## 📂 Contents: The coding projects I worked on (16 projects):
 
 - `functional_api.py`: Applying the functional API to create NNs with different architectures involving dropout and batchnormalisation to decrease overfitting and stabilise training on a randomly generated continious dataset. Best result 54.0% test accuracy.
 - `custom_layers.py`: Creating several custom layer architectures involving dropout to cluster randomly generated cluster data from 10 classes. Achieved 11.3% accuracy on test data (relatively good as data quite scattered).
