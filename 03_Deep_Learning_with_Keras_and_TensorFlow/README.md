@@ -29,19 +29,19 @@ By the end of this course, you will be able to:
 - `transfer_learning_vgg_16.py`: Finetuning the VGG16 to predict the color 'black' or 'white' of the picture (binary_corssentropy). Achieved 100% accuracy.
 - `transpose_convolution_image_reconstruction.py`: Creating, training and evaluating different transpose convolution layer architectures to reconstruct images. Lowest MSE on synthetic data (0.0018) was obtained under relatively small kernel sizes (but more computationally expensive)
 - `building_advanced_ts_transformer.py`: Building an advanced encoder-only transformer model for stock prices time series prediction. Defined the individual parts of the transformer by custom layers. Predictions versus actual:<br>
-  <img src="Images/stock_forecast_transformer.png" alt="Stock Price Versus Actual" width="300"/>
+  <img src="Images/stock_forecast_transformer.png" alt="Stock Price Versus Actual" width="100"/>
 - `shakespeare_transformer.py`: Building, training and evaluting a transformer model for generating Shakespearian sonnets. Led to realistic variations of the original work from Shakespeare.
 - `decoding_mnist.py`: Building and training an autoencoder model to denoise MNIST data set images, finetuning it to improve its performance.<br>
-  <img src="Images/mnist_reconstruction.jpg" alt="Denoising Images" width="300"/>
+  <img src="Images/mnist_reconstruction.jpg" alt="Denoising Images" width="100"/>
 - `diffusion_denoise.py`: Using various diffusion model architectures to denoise the MNIST data set. Decreased the validation loss (cross-entropy) from 0.204 (previous decoding_mnist.py) to 0.0996 with the best performing diffusion model.
 - `gan_generation.py`: Building several GANs to generate images.<br>
-  <img src="Images/gan_train.png" alt="Denoising Images" width="370"/>
+  <img src="Images/gan_train.png" alt="Denoising Images" width="100"/>
 - `custom_trainingloop_mnist.py`: Production-ready customtrainingloop with additional accuracy metric and custom callbacks logging used for mnist dataset efficient training.
 - `mnist_hyperparam_tune.py`: Evaluating the optimal learning rate and number of hidden layers using the keras tuner on the mnist dataset with a narrow-architecture. Optimal_Neurons{32,512} = 448, Optimal_lr{1e-04, 1e-02} = 2e-03.
 - `q_learning_agent_cartpole.py`: Setting up a Q-learning agent in cartpole environment and enhancing its performance using various architectures, adaptive exploration schedules and varying goal function agent. Maximum score was 9 steps without failure.
 - `dqn_cartpolev1.py`: Implemented a deep Q-Network in CartPole-v1, approximated Q-values via network(instead of table), trained network using memory, made a replay buffer. Scored a maximum of 43 steps without failure (+ ~400% compared to q_learning_agent_cartpole.py) due to more efficient learning.
 - `detecing_fruits`: Developed a classifcation model to detect fruits (24 types), finetuned based on VGG16 model. By fine-tuning increased vaidation accuracy from 58% to 90.05% meaning rougly 57% increase. Used advanced data augmentation techniques for the supervised part to improve generalisation. <br>
-<img src="Images/fruits.png" alt="24 fruits" width="100"/><img src="Images/fruit2.png" alt="24 fruits" width="186"/>
+<img src="Images/fruits.png" alt="24 fruits" width="100"/><img src="Images/fruit2.png" alt="24 fruits" width="100"/>
 - `trash_sorting`: Developed a classification model to differentiate betwween recyclable and organic waste (2 classes) based on images. Fine-tuned the VGG16 model for the task which increased the validation accuracy from 84.9% to 92.19% by about 8.6%.
 
 ## 🔧 Tools and Libraries
