@@ -1,10 +1,12 @@
+""">>>Setting up a Q-learning agent in cartpole environment and enhancing its performance using various architectures, 
+adaptive exploration schedules and varying goal function agent. Maximum score was 9 steps without failure.
 """
-# **Lab: Implementing Q-Learning in Keras**
-## Learning objectives:
-By the end of this lab, you will:  
-- Implement a Q-Learning algorithm using Keras
-- Define and train a neural network to approximate the Q-values
-- Evaluate the performance of the trained Q-Learning agent
+
+"""
+What is done in the code
+- Implementubg a Q-Learning algorithm using Keras
+- Defining and training a neural network to approximate the Q-values
+- Evaluating the performance of the trained Q-Learning agent
 
 #### Step 1: Setting Up the Environment
 """
