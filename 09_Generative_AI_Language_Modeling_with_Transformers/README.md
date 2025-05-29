@@ -17,7 +17,7 @@ By the end of this course, you will be able to:
 
 ## 📂 Contents: The coding projects I worked on
 
-- `transformer_language_modeling.py`: Placeholder project demonstrating the implementation of transformer architectures for NLP tasks. *(More projects coming soon...)*
+- ``: *(More projects coming soon...)*
 
 ---
 
