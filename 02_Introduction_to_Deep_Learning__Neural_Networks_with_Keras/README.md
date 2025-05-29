@@ -29,7 +29,7 @@ By the end of this course, you will be able to:
 - `convolutionalnn_mnist`: Predicting handrwitten digits in MNIST dataset using a convolutational NN (CNN). Highest accuracy obtained 0.9977 (two sets of convolutional and pooling layers).
 - `transformer_seq2seq_translation`: Building a seq-to-seq transormer with self-attention to perform English to Spanish translation (achieved 100% accuracy on a small set of predefined text pairs). 
 - `aviation_damage`: Classifying aircraft damage using a pre-trained VGG16 model (16 layers) and the RESNET model which I both fine-tuned (highest val. accuracy 68.8%) . Also generating captions using a pretrained transformer model from BLIP (huggingface).<p>
-  <img src="Images/crack.png" alt="Airplane Crack" width="170"/>
+  <img src="Images/crack.png" alt="Airplane Crack" width="170"/> <img src="Images/captionandsummary.png" alt="Airplane Crack" width="170"/> <img src="Images/boeing747.png" alt="Airplane Crack" width="170"/>
 ---
 
 ## 🔧 Tools and Libraries
