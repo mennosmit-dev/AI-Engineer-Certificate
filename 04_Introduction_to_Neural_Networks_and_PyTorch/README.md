@@ -19,7 +19,7 @@ By the end of this course, you will be able to:
 
 ---
 
-## 📂 Contents: The coding projects I worked on
+## 📂 Contents: The coding projects I worked on (
 
 - ``: *(More projects coming soon...)*
 
