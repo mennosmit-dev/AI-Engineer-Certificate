@@ -29,7 +29,8 @@ By the end of this course, you will be able to:
 - PyTorch
 - Hugging Face Transformers
 - FAISS
-
+- Gradio
+  
 ---
 
 ## 📌 Certificate Series
