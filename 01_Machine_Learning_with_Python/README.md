@@ -40,9 +40,10 @@ By the end of this course, you will be able to:
 - `evaluating_classification_models.py`: Evaluating classification models, models for predicting tumor being benign or malignant in breast cancer data set, adding gaussian noise for measurement error. Out-of-sample accuracy was KNN 0.926 and 0.971, and f1-score 0.93 and 0.97 for KNN and SVM respecitively.
 - `evaluating_random_forest.py`: Implementing a random forest to predict median housing price based on various attributes, evaluating its peformance and feature importance. OOS MSE was 0.2556.
 - `evaluating_k_means_clustering.py`: Generating synthetic data, creating k-means models, evaluate their perforamnce, investigate evaluation metrics for interpreting results (intution for the subjective practice of evaluating clustering results), Voronoi diagram.
-   <img src="Images/Hyperparam_Tune.png" alt="hyperparamter tuning scores" width="170"/> <img src="Images/hyperhyper.png" alt="Different Cluster Result Comparison" width="170"/> 
-- `regularization_in_linearregression.py`: Implementing regularization techniques such as RIDGE, evaluating their impact when there are outliers, select features using LASSO.
-- `ml_pipelines_and_gridsearchcv.py`: Building and evaluating a ML pipeline, building a grid-search implementation, implementing and evaluating a classification using real-world data, extract feature importance.
+   <img src="Images/Hyperparam_Tune.png" alt="hyperparamter tuning scores" width="170"/> <img src="Images/hyperhyper.png" alt="Different Cluster Result Comparison" width="00"/> 
+- `regularization_in_linearregression.py`: Implementing regularization techniques such as RIDGE, evaluating their impact when there are outliers, select features using LASSO, on synthetic data.
+- `ml_pipelines_and_gridsearchcv.py`: Building and evaluating a ML pipeline, building a grid-search implementation, implementing and evaluating a classification using iris data set, extract feature importance.
+- <img src="Images/confusion.png" alt="confusion matrix of best KNN model" width="170"/>
 - `practice_project`: Predicting whether a passenger of titanic survived based on attributes, implemented using ML Pipeline. Random forest and logistic regression are compared.
 - `finalproject_ausweather_.py`: Final project: for a KAGGLE data set predicting rainfall. Doing this by feature engineering, a classifier pipeline with grid-search, performance measures and evaluations, different classifiers (updating the pipeline), hyperparameter tuning. Scored 16/20 points (80/100%) by AI evaluation system.
 
