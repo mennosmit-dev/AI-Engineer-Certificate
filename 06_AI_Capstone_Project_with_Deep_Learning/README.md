@@ -20,7 +20,7 @@ By the end of this course, you will be able to:
 
 ## 📂 Contents: The coding projects I worked on
 
-- `capstone_project_main.py`: Placeholder for capstone project code, showcasing the full deep learning workflow from data loading to model evaluation. *(Full implementation in progress...)*
+- ``: *(Full implementation in progress...)*
 
 ---
 
