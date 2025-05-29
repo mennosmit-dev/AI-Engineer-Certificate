@@ -28,7 +28,8 @@ By the end of this course, you will be able to:
    <img src="Images/decision_trees_new.png" alt="Distribution drug" width="170"/> 
 - `regression_trees_taxi_tip.py`: Predicting the taxi tip. R-squared was relatively low due to the high amount of noise in the tip, which meant that decresing the max_depth of the tree improved OOS MSE by 10%. 
 - `decision_tree_svm_ccfraud.py`: For the Kaggle Data set 'Credit Card Fraud Detection' with Decision Trees and SVM using python APIs, utilising hinge loss, obtained a SVM ROC-AUC score: 0.986.
-- `knn_classification.py`: KNN for predicting service category telecommunications customers. Four categories, optimal neighbours is around 40 giving accuracy of 0.404 on test set.
+- `knn_classification.py`: KNN for predicting service category telecommunications customers. Four categories, optimal neighbours is around 40 giving accuracy of 0.404 on test set. <p>
+  <img src="Images/hyperparam.png" alt="Number of Neighbours" width="170"/> <img src="Images/variables.png" alt="Correlation Matrix" width="170"/> 
 - `random__forests__xgboost.py`: Utilising Random Forest and XGBoost to predict housing prices. Evaluating both algorithms accuracy and speed.
 - `k-means-customer-seg.py`: Applying K-means for customer segmentation on simulated data simulated and on a real dataset, evaluating results using a colour map.
 - `comparing_dbscan_hdbscan.py`: Comparing DBSCAN to HDBSCAN on clustering art gallaries and musea (WGS84 date, and Web marcator (EPSG:3857)).
