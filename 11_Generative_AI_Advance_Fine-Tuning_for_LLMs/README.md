@@ -17,7 +17,7 @@ By the end of this course, you will be able to:
 
 ## 📂 Contents: The coding projects I worked on
 
-- `llm_advanced_fine_tuning.py`: Placeholder project demonstrating advanced fine-tuning techniques for LLMs using Hugging Face. *(More projects coming soon...)*
+- ``: *(More projects coming soon...)*
 
 ---
 
