@@ -17,7 +17,7 @@ By the end of this course, you will be able to:
 
 ## 📂 Contents: The coding projects I worked on
 
-- `nlp_foundations_project.py`: Placeholder project demonstrating text representation techniques and simple language model training. *(More projects coming soon...)*
+- ``: *(More projects coming soon...)*
 
 ---
 
