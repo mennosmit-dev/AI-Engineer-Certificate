@@ -35,11 +35,12 @@ By the end of this course, you will be able to:
   <img src="Images/Education_Age_Income.png" alt="Size of dot is education level (bigger is higher)" width="170"/> 
 - `comparing_dbscan_hdbscan.py`: Comparing DBSCAN to HDBSCAN on clustering art gallaries and musea in Canada (WGS84 date, and Web marcator (EPSG:3857)). <p>
    <img src="Images/DBSCAN.png" alt="DBSCAN" width="170"/> <img src="Images/HDBSCAN.png" alt="HDBSCAN" width="170"/> 
-- `pca.py`: (a) projecting 2D data onto prinicpal axis via PCA and (b) exploring 4 dimensional reduction for iris flowers.
-- `t-sne_umap.py`:Comparing t-SNE and UMAP, also against PCA, on feature space dimensions (on a synthetic make_blobs dataset)
-- `evaluating_classification_models.py`: Evaluating classification models, models for predicting tumor being benign or malignant in breast cancer data set, adding gaussian noise for measurement error.
-- `evaluating_random_forest.py`: Implementing a random forest to predict median housing price based on various attributes, evaluating its peformance and feature importance.
+- `pca.py`: (a) projecting 2D data onto prinicpal axis via PCA and (b) exploring 4 dimensional reduction for iris flowers. One PC explained about 72% of variance.
+- `t-sne_umap.py`:Comparing t-SNE and UMAP, also against PCA, on feature space dimensions (on a synthetic make_blobs dataset).
+- `evaluating_classification_models.py`: Evaluating classification models, models for predicting tumor being benign or malignant in breast cancer data set, adding gaussian noise for measurement error. Out-of-sample accuracy was KNN 0.926 and 0.971, and f1-score 0.93 and 0.97 for KNN and SVM respecitively.
+- `evaluating_random_forest.py`: Implementing a random forest to predict median housing price based on various attributes, evaluating its peformance and feature importance. OOS MSE was 0.2556.
 - `evaluating_k_means_clustering.py`: Generating synthetic data, creating k-means models, evaluate their perforamnce, investigate evaluation metrics for interpreting results (intution for the subjective practice of evaluating clustering results), Voronoi diagram.
+   <img src="Images/Hyperparam_Tune.png" alt="hyperparamter tuning scores" width="170"/> <img src="Images/hyperhyper.png" alt="Different Cluster Result Comparison" width="170"/> 
 - `regularization_in_linearregression.py`: Implementing regularization techniques such as RIDGE, evaluating their impact when there are outliers, select features using LASSO.
 - `ml_pipelines_and_gridsearchcv.py`: Building and evaluating a ML pipeline, building a grid-search implementation, implementing and evaluating a classification using real-world data, extract feature importance.
 - `practice_project`: Predicting whether a passenger of titanic survived based on attributes, implemented using ML Pipeline. Random forest and logistic regression are compared.
