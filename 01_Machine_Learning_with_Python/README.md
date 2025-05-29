@@ -33,7 +33,7 @@ By the end of this course, you will be able to:
 - `random__forests__xgboost.py`: Utilising Random Forest and XGBoost to predict housing prices in California. Evaluating both algorithms accuracy and speed. On test: MSE RF was 0.2556 and XGBoost 0.2226, training time/testing time 17.777 versus 0.292 and 0.373 versus 0.016.
 - `k-means-customer-seg.py`: Applying K-means for customer segmentation on simulated data simulated and on a real dataset, evaluating results using various color figures. <p>
   <img src="Images/Education_Age_Income.png" alt="Size of dot is education level (bigger is higher)" width="170"/> 
-- `comparing_dbscan_hdbscan.py`: Comparing DBSCAN to HDBSCAN on clustering art gallaries and musea in Canada (WGS84 date, and Web marcator (EPSG:3857)).
+- `comparing_dbscan_hdbscan.py`: Comparing DBSCAN to HDBSCAN on clustering art gallaries and musea in Canada (WGS84 date, and Web marcator (EPSG:3857)). <p>
    <img src="Images/DBSCAN.png" alt="DBSCAN" width="170"/> <img src="Images/HDBSCAN.png" alt="HDBSCAN" width="170"/> 
 - `pca.py`: (a) projecting 2D data onto prinicpal axis via PCA and (b) exploring 4 dimensional reduction for iris flowers.
 - `t-sne_umap.py`:Comparing t-SNE and UMAP, also against PCA, on feature space dimensions (on a synthetic make_blobs dataset)
