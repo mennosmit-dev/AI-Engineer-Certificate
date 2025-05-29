@@ -17,7 +17,7 @@ By the end of this course, you will be able to:
 
 ## 📂 Contents: The coding projects I worked on
 
-- `llm_data_preparation.py`: Placeholder project demonstrating tokenization and data loading processes for training large language models. *(More projects coming soon...)*
+- ``: *(More projects coming soon...)*
 
 ---
 
