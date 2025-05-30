@@ -24,6 +24,13 @@ By the end of this course, you will be able to:
 - Seventeen projects for building fundamental knowledge in pytorch: about 1D tensors, two-dimensinal tensors, derrivatives, loading existing datasets(f.e. MNIST), linear regression (3 labs), SGD, mini-batch SGD, optimisation, training and validating via DataLoader and hyperparameter tuning loops, linear regression with high dimensionality and many outputs (4 labs), logistic regression, cross-entropy **(but focus on intuïtion and learning and not applicable directly in real word so left it out)**. 
 - `breast_cancer_classification.py`: Using a variety of neural network configurations to predict whether brain cells are benign or malignant. 
 - `league_of_legends_outcome_prediction.py`: Build a logistic regression to predict the outcome of a LOL match based on in-game statistics. Utilising weight_decay(momentum) led to a negligable improvement in test accuracy.
+
+ROC_test.png
+
+classification_report_test.png
+
+confusion_momentum_test.png
+
 ---
 
 ## 🔧 Tools and Libraries
