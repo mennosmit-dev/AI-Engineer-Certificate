@@ -139,43 +139,69 @@ optimizer = optim.Adam(model.parameters(), lr=0.001)
 epochs = 10
 train_losses = []
 test_losses = []
+train_accuracies = []
+test_accuracies = []
 
 for epoch in range(epochs):
     # Training phase
     model.train()
     running_loss = 0.0
+    correct = 0
+    total = 0
     for X_batch, y_batch in train_loader:
         optimizer.zero_grad()
         outputs = model(X_batch)
         loss = criterion(outputs, y_batch)
         loss.backward()
         optimizer.step()
+        
         running_loss += loss.item()
+        
+        # Compute training accuracy
+        _, predicted = torch.max(outputs.data, 1)
+        total += y_batch.size(0)
+        correct += (predicted == y_batch).sum().item()
 
     train_loss = running_loss / len(train_loader)
+    train_accuracy = 100 * correct / total
     train_losses.append(train_loss)
-
+    train_accuracies.append(train_accuracy)
+    
     # Evaluation phase on test set
     model.eval()
     test_loss = 0.0
+    correct = 0
+    total = 0
     with torch.no_grad():
         for X_batch, y_batch in test_loader:
             test_outputs = model(X_batch)
             loss = criterion(test_outputs, y_batch)
             test_loss += loss.item()
+            
+            # Compute test accuracy
+            _, predicted = torch.max(test_outputs.data, 1)
+            total += y_batch.size(0)
+            correct += (predicted == y_batch).sum().item()
 
     test_loss /= len(test_loader)
+    test_accuracy = 100 * correct / total
     test_losses.append(test_loss)
-
-    print(f'Epoch [{epoch + 1}/{epochs}], Train Loss: {train_loss:.4f}, Test Loss: {test_loss:.4f}')
+    test_accuracies.append(test_accuracy)
+    
+    print(f'Epoch [{epoch + 1}/{epochs}], '
+          f'Train Loss: {train_loss:.4f}, Train Acc: {train_accuracy:.2f}%, '
+          f'Test Loss: {test_loss:.4f}, Test Acc: {test_accuracy:.2f}%')
 
 """
 Plotting the loss curves helps us understand the training dynamics of our model.
 """
 import matplotlib.pyplot as plt
 
-# Plot the loss curves
-plt.figure(figsize=(10, 6))
+# Plot the loss and accuracy curves
+plt.figure(figsize=(12, 10))
+
+# Loss subplot
+plt.subplot(2, 1, 1)
 plt.plot(range(1, epochs + 1), train_losses, label='Training Loss')
 plt.plot(range(1, epochs + 1), test_losses, label='Test Loss', linestyle='--')
 plt.xlabel('Epoch')
@@ -183,7 +209,20 @@ plt.ylabel('Loss')
 plt.title('Training and Test Loss Curve')
 plt.legend()
 plt.grid(True)
+
+# Accuracy subplot
+plt.subplot(2, 1, 2)
+plt.plot(range(1, epochs + 1), train_accuracies, label='Training Accuracy')
+plt.plot(range(1, epochs + 1), test_accuracies, label='Test Accuracy', linestyle='--')
+plt.xlabel('Epoch')
+plt.ylabel('Accuracy (%)')
+plt.title('Training and Test Accuracy Curve')
+plt.legend()
+plt.grid(True)
+
+plt.tight_layout()
 plt.show()
+
 
 """Exercise 1 - Change to different optimizer: SGD
 """
