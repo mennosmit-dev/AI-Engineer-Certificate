@@ -26,7 +26,7 @@ By the end of this course, you will be able to:
 - ``: CNN on MNIST
 - ``: CNN with batchnormalisation
 - ``: CNN for Anime classification
-- - ``: Fashion MNIST Classification
+- ``: Fashion MNIST Classification
 ---
 
 ## 🔧 Tools and Libraries
