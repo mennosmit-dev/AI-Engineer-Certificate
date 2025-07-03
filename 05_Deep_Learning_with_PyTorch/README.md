@@ -25,7 +25,8 @@ By the end of this course, you will be able to:
 - `normalised_batch_mnist.py`: Investigating the effect of utilising batch normalisation led to an 2% increase which is relatively low since the regular version already achieved around 97.5% accuracy on MNIST.
 - `cnn_mnist.py`: Implementing a two convolution layer and one connecting layer led to an 95% accuracy on the MNIST dataset.
 - `cnn_mnist_batch.py`: Implementing the same CNN as before but now also normalising the ouputs of the activation functions led to an increased accuracy of 98%.
-- ``: CNN for Anime classification
+- `cnn_anime.py`: Building a CNN for animé character classification (Japanese data set of 130 classes, 9738 images) we chose the animés Anastasia and takao each with 50 samples. In addition we utilised leaky_relu (1), looked at the effect of additional epochs(2), 
+ and also used different character classes for training and evaluation like arcueid_brunestud and yukinoshita_yukino(3). On the original animés and different classes this achieved 100% accuracy. 
 - ``: Fashion MNIST Classification
 ---
 
