@@ -21,7 +21,7 @@ By the end of this course, you will be able to:
 ## 📂 Contents: The coding projects I worked on (22 projects)
 
 -Sixteen projects including two projects on logistic regression MSE and logistic regression cross entropy, two projects based on softmax classifiers, four projects focused on building (deep) neural networks in pytorch, one on nn.ModuleList(), two on dropout classification/regression, He initialisation with ReLu, convolution, activation function and maxpooling, multiple input and output channels, CNN simple example **(but focus on intuïtion and learning and not applicable directly in real word so left it out)**.
-- ``: Comparing Unifrom, Python Default, and Xavier Initialisiation on MNIST dataset with tanh
+- `different_mnist_initalisations`: Comparing Python default, uniform, and Xavier Uniform initialisations on MNIST dataset. From high to low: Xavier(63%), Default (23%), Uniform (12%) when trained over 15 epoch.
 - ``: Batch normalisation with MNIST
 - ``: CNN on MNIST
 - ``: CNN with batchnormalisation
