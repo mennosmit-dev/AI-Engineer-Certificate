@@ -24,7 +24,7 @@ By the end of this course, you will be able to:
 - `different_mnist_initalisations.py`: Comparing Python default, uniform, and Xavier Uniform initialisations on MNIST dataset. From high to low: Xavier(63%), Default (23%), Uniform (12%) when trained over 15 epoch.
 - `normalised_batch_mnist.py`: Investigating the effect of utilising batch normalisation led to an 2% increase which is relatively low since the regular version already achieved around 97.5% accuracy on MNIST.
 - `cnn_mnist.py`: Implementing a two convolution layer and one connecting layer led to an 95% accuracy on the MNIST dataset.
-- ``: CNN with batchnormalisation
+- `cnn_mnist_batch.py`: Implementing the same CNN as before but now also normalising the ouputs of the activation functions led to an increased accuracy of 98%.
 - ``: CNN for Anime classification
 - ``: Fashion MNIST Classification
 ---
