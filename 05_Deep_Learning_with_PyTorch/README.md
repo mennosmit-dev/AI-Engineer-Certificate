@@ -29,7 +29,7 @@ By the end of this course, you will be able to:
  and also used different character classes for training and evaluation like arcueid_brunestud and yukinoshita_yukino(3). On the original animés and different classes this achieved 100% accuracy. <br>
 <img src="Images/anime.png" alt="Classifying Anastasia and Takao series where 1 is Takao and Anastasia 0" width="200"/>
 - `cnn_fashion_mnist.py`: Utiilsed a CNN to classify fashion items in the Fashion-MNIST ddataset. <br>
-<img src="Images/fashion.png" alt="Accuracy (% correct) and cross-entropy loss."/>
+<img src="Images/fashion.png" alt="Accuracy (% correct) and cross-entropy loss." width="200"/>
 
 ---
 
