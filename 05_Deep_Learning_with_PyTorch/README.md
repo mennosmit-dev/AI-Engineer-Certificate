@@ -26,8 +26,10 @@ By the end of this course, you will be able to:
 - `cnn_mnist.py`: Implementing a two convolution layer and one connecting layer led to an 95% accuracy on the MNIST dataset.
 - `cnn_mnist_batch.py`: Implementing the same CNN as before but now also normalising the ouputs of the activation functions led to an increased accuracy of 98%.
 - `cnn_anime.py`: Building a CNN for animé character classification (Japanese data set of 130 classes, 9738 images) we chose the animés Anastasia and takao each with 50 samples. In addition we utilised leaky_relu (1), looked at the effect of additional epochs(2), 
- and also used different character classes for training and evaluation like arcueid_brunestud and yukinoshita_yukino(3). On the original animés and different classes this achieved 100% accuracy.   <img src="Images/anime.png" alt="Classifying Anastasia and Takao series where 1 is Takao and Anastasia 0" width="200"/>
-- ``: Used a CNN to classify fashion items in the Fashion-MNIST.
+ and also used different character classes for training and evaluation like arcueid_brunestud and yukinoshita_yukino(3). On the original animés and different classes this achieved 100% accuracy.
+<img src="Images/anime.png" alt="Classifying Anastasia and Takao series where 1 is Takao and Anastasia 0" width="200"/>
+- `cnn_fashion_mnist.py`: Utiilsed a CNN to classify fashion items in the Fashion-MNIST ddataset.
+<img src="Images/fashion.png" alt="Accuracy (% correct) and cross-entropy loss."/>
 ---
 
 ## 🔧 Tools and Libraries
