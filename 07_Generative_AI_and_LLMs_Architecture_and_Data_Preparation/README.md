@@ -16,9 +16,13 @@ By the end of this course, you will be able to:
 ---
 
 ## 📂 Contents: The coding projects I worked on
-
-- ``: *(More projects coming soon...)*
-
+- ``: Experimented with several Hugging Face Models to build chatbots. This included "facebook/blenderbot-400M-distill", "flan-t5-base", "google/flan-t5-small", and "facebook/bart-base".
+- ``:
+- ``:
+- ``:
+- ``:
+- ``:
+  
 ---
 
 ## 🔧 Tools and Libraries
