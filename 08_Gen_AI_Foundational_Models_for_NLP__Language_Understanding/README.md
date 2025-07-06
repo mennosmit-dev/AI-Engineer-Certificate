@@ -17,7 +17,7 @@ By the end of this course, you will be able to:
 
 ## 📂 Contents: The coding projects I worked on
 
-- `classifying_document.py`: Building a document classifier with EmbeddingBag layer and softmax output layer, trained on the AG_NEWS dataset with a data loader, visualised using 3D t-SNE. Final test accuracy was 84% over 4 distinct classes.
+- `classifying_document.py`: Building a large-scale document classifier with EmbeddingBag layer and softmax output layer, trained on the AG_NEWS dataset with a data loader, visualised using 3D t-SNE. Final test accuracy was 84% over 4 distinct classes.
 - ``:
 - ``:
 - ``: 
