@@ -18,8 +18,9 @@ By the end of this course, you will be able to:
 
 ---
 
-## 📂 Contents: The coding projects I worked on ( projects):
+## 📂 Contents: The coding projects I worked on (3 projects):
 
+- Two projects including data loading in keras and data preparation.
 - ``: 
 
 ---
