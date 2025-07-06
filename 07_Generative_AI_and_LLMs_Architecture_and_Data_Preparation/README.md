@@ -17,7 +17,7 @@ By the end of this course, you will be able to:
 
 ## 📂 Contents: The coding projects I worked on
 - `hugging_models._chatbot.py`: Experimented with several Hugging Face Models to build chatbots. This included "facebook/blenderbot-400M-distill", "flan-t5-base", "google/flan-t5-small", and "facebook/bart-base".
-- ``: Applying several tokenisation strategies including NLTK, SPACY, BERT (Unigram and SentencePiece) and XLNetTokenizer (and torchtext).
+- `implementing_tokenization.py`: Applying several tokenisation strategies including NLTK, SPACY, BERT (Unigram and SentencePiece) and XLNetTokenizer (and torchtext).
 - ``:
 - ``:
 - ``:
