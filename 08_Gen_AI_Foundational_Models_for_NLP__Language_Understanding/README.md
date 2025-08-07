@@ -18,8 +18,8 @@ By the end of this course, you will be able to:
 ## 📂 Contents: The coding projects I worked on
 
 - `classifying_document.py`: Building a large-scale document classifier with EmbeddingBag layer and softmax output layer, trained on the AG_NEWS dataset with a data loader, visualised using 3D t-SNE. Final test accuracy was 84% over 4 distinct classes.
-- ``:
-- ``:
+- `n_gram_analysis_models.py`: Building an N-gram Histogram model in NTLK to uncover word patterns in 90s rap. Utilised monogram, bigram, and trigram analysis of which the latter performs best, but limited compared to more advanced models as we will see next.
+- ``:U
 - ``: 
 
 ---
