@@ -19,7 +19,7 @@ By the end of this course, you will be able to:
 
 - `classifying_document.py`: Building a large-scale document classifier with EmbeddingBag layer and softmax output layer, trained on the AG_NEWS dataset with a data loader, visualised using 3D t-SNE. Final test accuracy was 84% over 4 distinct classes.
 - `n_gram_analysis_models.py`: Building an N-gram Histogram model in NTLK to uncover word patterns in 90s rap. Utilised monogram, bigram, and trigram analysis of which the latter performs best, but limited compared to more advanced models as we will see next.
-- `FNN_LanguageModel.py`: Building a gneral feed forward neural network (FNN) to predict rap words. Compared 2-gram, 4-gram, and 8-gram in terms of their perplexity over training epoch. <br>
+- `FNN_LanguageModel.py`: Building a gneral feed forward neural network (FNN) to predict rap words, which works significantly better than previous approach. Compared 2-gram, 4-gram, and 8-gram in terms of their perplexity over training epoch, see below for results. <br>
 <img src="Images/embeddings 4-gram.png" alt="Translation Spanisch<->English.." width="250"/>  <img src="Images/perplexity.png" alt="Translation Spanisch<->English.." width="200"/>
 - ``: 
 
