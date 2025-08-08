@@ -23,6 +23,7 @@ By the end of this course, you will be able to:
 <img src="Images/embeddings 4-gram.png" alt="Embeddings" width="200"/>  <img src="Images/perplexity.png" alt="Perplexity" width="200"/>
 - `Word2VecModels.py`: Build several Word2Vec models including CBOW and Skip-gram based on a toy rap dataset, in addition implemented the Standford Glove model. Visulaised the resulting embeddings via t-SNE 2D embeddings. Over 400 epoch CBOW significantly outperformed Skip-gram with a nearly zero cross-entropy versus around 3. This can be explained by the limited occurence of rare words. <br>
 <img src="Images/CBOW_embeddings.png" alt="CBOW embeddings" width="200"/>
+- `classifying_document.py`:
 - `Word2VecApplications.py`: Implemented Stanfords GloVe model and trained a word2vec using the gensim library. Finally, used the optimised embeddings to predict the category of AG_NEWS articles, which led to 64.6% accuracy over 10 epoch.
 
 ---
