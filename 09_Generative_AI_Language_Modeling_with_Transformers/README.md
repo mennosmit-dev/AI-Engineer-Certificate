@@ -17,7 +17,8 @@ By the end of this course, you will be able to:
 
 ## 📂 Contents: The coding projects I worked on
 
-- `attention_pos_encoding_models.py`: Experimented with attention mechanism for translation models and more general setups involing multi-head attention, with several postitional encoding layers, and with Transformer Encoder and Decoder models, building a broad intuïtion around it.
+- `attention_pos_encoding_models.py`: Experimented with attention mechanism for translation models and more general setups involing multi-head attention, with several postitional encoding layers, and with Transformer Encoder and Decoder models, building a broad intuïtion around it. <br>
+<img src="Images/cos_sin_waves.png" alt="cosinus_sinus_waves" width="200"/> <br>
 
 ---
 
