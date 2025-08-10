@@ -19,7 +19,7 @@ By the end of this course, you will be able to:
 
 - `attention_pos_encoding_models.py`: Experimented with attention mechanism for translation models and more general setups involing multi-head attention. Also experimented with several postitional encoding layers, and with Transformer Encoder and Decoder models, building a broad intuïtion around it. <br>
 <img src="Images/cos_sin_waves.png" alt="cosinus_sinus_waves" width="200"/> <br>
-- `archive_classifier.py`: Rigorously build a transformer model to spit through large archives of documents and classify the documents under five distinct categories, scoring over 80% accuracy. The models consists of an embedding layer, positional encoding layer (tried several to see which worked best), and two sequential transformer encoders followed by linear layer.
+- `archive_classifier.py`: Rigorously build a transformer model to spit through large archives of documents and classify the documents under five distinct categories, scoring over 80% accuracy. The model consists of an embedding layer, positional encoding layer (tried several to see which worked best), and two sequential transformer encoders followed by linear layer.
 
 
 
