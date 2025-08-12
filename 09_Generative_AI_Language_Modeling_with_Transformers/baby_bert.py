@@ -1,4 +1,4 @@
-""
+"""
 Objectives
 - **Demystify tokenization**: Introduce the critical first step in processing text for Natural Language Processing (NLP) — tokenization. We'll learn how to convert raw text into a format that's amenable to machine processing.
 - **Decode encoder models**: Shed light on the structure and function of encoder models, particularly how they capture and process the complexities of language.
