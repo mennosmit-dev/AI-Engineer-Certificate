@@ -22,7 +22,7 @@ By the end of this course, you will be able to:
 - `archive_classifier.py`: Rigorously build a custom transformer model to spit through large archives of documents and classify the documents under five distinct categories, scoring over 80% accuracy. The model consists of an embedding layer, positional encoding layer (tried several to see which worked best), and two sequential transformer encoders followed by linear layer.
 - `gpt_text_generator.py`: Fully build and trained a custom small-scale GPT model (due to limited comput. resources) to generate text based on user input, and saw from experimentation that it performed similar to the GPT2 from HuggingFace on a variety of tasks which was trained on a massive dataset with enormous computational resources. <br>
 <img src="Images/model_training_gpt.png" alt="model_training_loss" width="200"/> <br>
-- `baby_bert.py`: Build and trained a `baby`BERT model for Next Sentence Prediction (NSP) and Masked Language Modelling (MLM) for conceptual understanding. The model did not perform that well mostly due to the relatively small number of parameters and data on which it was trained, it was apparent however that the model had language understanding. <br>
+- `baby_bert.py`: Build and trained a `baby` BERT model for Next Sentence Prediction (NSP) and Masked Language Modelling (MLM) for conceptual understanding. The model did not perform that well mostly due to the relatively small number of parameters and data on which it was trained, it was apparent however that the model had language understanding. <br>
 <img src="Images/cat_and_mouse1.png" alt="Next Sentence Prediction In Action" width="200"/> <br>
 
 
