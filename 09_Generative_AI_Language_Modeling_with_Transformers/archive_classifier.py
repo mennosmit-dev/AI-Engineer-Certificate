@@ -1,4 +1,6 @@
 """
+Rigorously build a custom transformer model to spit through large archives of documents and classify the documents under five distinct categories, scoring over 80% accuracy. The model consists of an embedding layer, positional encoding layer (tried several to see which worked best), and two sequential transformer encoders followed by linear layer.
+
 Objectives
 - Work with datasets and understand tokenizer, embedding bag technique and vocabulary
 - Explore embeddings in PyTorch and understand token indices
