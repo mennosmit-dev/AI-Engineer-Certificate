@@ -1,4 +1,6 @@
 """
+Experimented with attention mechanism for translation models and more general setups involing multi-head attention. Also experimented with several postitional encoding layers, and with Transformer Encoder and Decoder models, building a broad intuïtion around it.
+
 Objectives
 - Understand the basics of tokenization and how textual data is prepared for neural network models.
 - Learn the concept of one-hot encoding and its application in representing textual data for machine learning models.
