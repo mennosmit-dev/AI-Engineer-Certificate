@@ -25,6 +25,8 @@ By the end of this course, you will be able to:
 - `baby_bert.py`: Build and trained a `baby` BERT model for Next Sentence Prediction (NSP) and Masked Language Modelling (MLM) for conceptual understanding. The model did not perform that well mostly due to the relatively small number of parameters and data on which it was trained, it was apparent however that the model had language understanding (for example see image). 
 - `bert_data_fetching.py`: Build a series of functions dedicated to turn plain text into BERT input data, as was used for example for the previous project, and can be used for very large datasets too. <br>
 <img src="Images/bert_input_generator.png" alt="transformed input data" width="200"/> <br>
+- `transformer_translate_model.py`: Designed, build and trained, and evaluated an advanced translator transformer-based architecture to translate an input PDF German language written document into English. BLUE score for many samples was 1.0 or close to. <br>
+<img src="Images/model_translation.png" alt="transformed input data" width="200"/> <br>
 
 
 ---
