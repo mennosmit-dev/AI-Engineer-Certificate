@@ -16,8 +16,7 @@ By the end of this course, you will be able to:
 ---
 
 ## 📂 Contents: The coding projects I worked on
-- `hugging_face_models.py`: Loaded and utilised several hugging face models to manually and also via the pipeline function to perform sentiment classification (DistilBERT) and text generation (GPT-2).
-- <br>
+- `hugging_face_models.py`: Loaded and utilised several hugging face models to manually and also via the pipeline function to perform sentiment classification (DistilBERT) and text generation (GPT-2). <br>
 <img src="Images/generation.png" alt="GPT-2" width="200"/> <img src="Images/sentiment.png" alt="DistilBERT" width="200"/> <br>
 - `llm_pretraining_huggingface.py`: Utilised several pre-trained LLMs (facebook/opt-350m, bert-scratch-model.pt, bert-base-uncased)  and self-supervised fine-tuned them on several of my data sets of my own choice manually (like wiki). Model showed a very distinct performance based on the perplexity measure.
 ---
