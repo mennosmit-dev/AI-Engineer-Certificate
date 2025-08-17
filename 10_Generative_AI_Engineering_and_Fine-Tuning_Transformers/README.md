@@ -16,8 +16,8 @@ By the end of this course, you will be able to:
 ---
 
 ## 📂 Contents: The coding projects I worked on
-
-- ``: Placeholder project demonstrating the fine-tuning process of transformer models using Hugging Face and PyTorch. *(More projects coming soon...)*
+- `hugging_face_models.py`: Loaded and utilised several hugging face models to manually or via the pipeline function perform sentiment classification (DistilBERT) and text generation (GPT-2).
+- ``: 
 
 ---
 
