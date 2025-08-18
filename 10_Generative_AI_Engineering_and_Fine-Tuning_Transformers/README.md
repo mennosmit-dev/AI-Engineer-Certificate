@@ -19,6 +19,9 @@ By the end of this course, you will be able to:
 - `hugging_face_models.py`: Loaded and utilised several hugging face models to manually and also via the pipeline function to perform sentiment classification (DistilBERT) and text generation (GPT-2). <br>
 <img src="Images/generation.png" alt="GPT-2" width="200"/> <img src="Images/sentiment.png" alt="DistilBERT" width="200"/> <br>
 - `llm_pretraining_huggingface.py`: Utilised several pre-trained LLMs (facebook/opt-350m, bert-scratch-model.pt, bert-base-uncased)  and self-supervised fine-tuned them on several of my data sets of my own choice manually (like wiki). Model showed a very distinct performance based on the perplexity measure.
+- `stateofart_pretrained_llm_finetuning.py`: Finetuned a BERT "bert-base-cased" and the "yelp review" dataset from pytorch, compared this to the huggingface SFFTtrainer with the "facebook/opt-350m" model and "timdettmers/openassistant-guanaco" dataset. Saw a similar performance when looking at generated chatbot text, which puts the favour in the second approach which was easier to implement for this use case. The first approach allowed for more control over internal processes which can also sometimes be preferred. <br>
+ <img src="Images/BERT_pytorch_loss.png" alt="loss of the first pytorch model over time (more control over internal processes)" width="200"/> <br>
+
 ---
 
 ## 🔧 Tools and Libraries
