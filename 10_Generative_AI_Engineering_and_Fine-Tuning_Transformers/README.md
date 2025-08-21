@@ -22,7 +22,7 @@ By the end of this course, you will be able to:
 - `stateofart_pretrained_llm_finetuning.py`: Finetuned a BERT "bert-base-cased" and the "yelp review" dataset from pytorch, compared this to the huggingface SFFTtrainer with the "facebook/opt-350m" model and "timdettmers/openassistant-guanaco" dataset. Saw a similar performance when looking at generated chatbot text, which puts the favour in the second approach which was easier to implement for this use case. The first approach allowed for more control over internal processes which can also sometimes be preferred. <br>
  <img src="Images/BERT_pytorch_loss.png" alt="loss of the first pytorch model over time (more control over internal processes)" width="200"/> <br>
 - `adapters_classificaton_model.py`: Evaluated three methods for finetuning a model pretrained on AG News data set to classify film category on IMDB movie descriptions. Fine-tuning the full model was very time-consuming and led to 89% accuracy (2-3 hours), only the last layer was fast but only achieved 65% accuracy (2-3 minutes), finally the adapter-based model was relatively quick (12 minutes) and achieved an accuracy of 0.87.
-- `lora_sentiment_analysis.py`: Fine-tuned a PyTorch model with LoRA, first leveraging AG News pretraining, then adapted it to IMDB for sentiment analysis — likely achieving strong performance 92% accuracy on movie reviews.
+- `lora_sentiment_analysis.py`: Fine-tuned a PyTorch model with LoRA, first leveraging AG News pretraining, then adapted it to IMDB for sentiment analysis — achieving strong performance 92% accuracy on movie reviews.
 ---
 
 ## 🔧 Tools and Libraries
