@@ -17,7 +17,7 @@ By the end of this course, you will be able to:
 
 ## 📂 Contents: The coding projects I worked on
 
-- `reward_modelling_gpt2.py`: Fine-tuned the GPT2 model to reward the quality of response of LLMs, which is later used for Reinforcement Learning with Human Feedback (RLHF) (trained on "Dahoas/synthetic-instruct-gptj-pairwise"). The final pairwise accuracy of the model was 71%.
+- `reward_modelling_gpt2.py`: Fine-tuned the GPT2 model to reward the quality of response of LLMs, which is later used for Reinforcement Learning with Human Feedback (RLHF) (trained on "Dahoas/synthetic-instruct-gptj-pairwise" using LoRa). The final pairwise accuracy of the model was 71%.
 - `rlhf_ppo_sentiment.py`: Trained GPT-2 models with Reinforcement Learning from Human Feedback (RLHF) using PPO on the IMDb dataset to shape 'Happy' and 'Pessimistic' LLM behaviors for customer service scenarios. The models achieved 85% sentiment alignment with the target style.
 ---
 
