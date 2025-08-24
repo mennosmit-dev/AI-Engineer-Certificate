@@ -17,7 +17,7 @@ By the end of this course, you will be able to:
 
 ## 📂 Contents: The coding projects I worked on
 
-- ``: *(More projects coming soon...)*
+- `reward_modelling_gpt2.py`: Fine-tuned the GPT2 model to reward the quality of response which is later used for Reinforcement Learning with Human Feedback (RLHF) (trained on "Dahoas/synthetic-instruct-gptj-pairwise"). The final pairwise accuracy of the model was 71%.
 
 ---
 
