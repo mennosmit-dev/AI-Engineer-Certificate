@@ -18,6 +18,7 @@ By the end of this course, you will be able to:
 ## 📂 Contents: The coding projects I worked on
 
 - `rag_hr_policy_qa.py`: Built a Retriever-Augmented Generation pipeline with DPR and GPT2 to create an intelligent HR policy Q&A tool. The system reduced employee query resolution time by 70% by delivering instant, accurate answers from policy documents.
+- `rag_song_filter.py`: Developed a RAG-based system in PyTorch using embeddings, retrieval, and generation to assess song appropriateness for children on a social media platform. Achieved scalable, cost-efficient content moderation that improved retrieval accuracy and reduced reliance on full LLM inference.
 
 ---
 
