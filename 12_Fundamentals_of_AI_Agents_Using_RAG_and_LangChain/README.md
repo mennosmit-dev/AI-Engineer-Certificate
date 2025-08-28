@@ -17,7 +17,7 @@ By the end of this course, you will be able to:
 
 ## 📂 Contents: The coding projects I worked on
 
-- ``: *(More projects coming soon...)*
+- `rag_hr_policy_qa.py`: Built a Retriever-Augmented Generation pipeline with DPR and GPT2 to create an intelligent HR policy Q&A tool. The system reduced employee query resolution time by 70% by delivering instant, accurate answers from policy documents.
 
 ---
 
