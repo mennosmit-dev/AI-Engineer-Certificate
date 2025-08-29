@@ -1,4 +1,4 @@
-"
+"""
 Objectives
 - **Understand the basics of prompt engineering**: Gain a solid foundation in how to effectively communicate with LLM using prompts, setting the stage for more advanced techniques.
 - **Master advanced prompt techniques**: Learn and apply advanced prompt engineering techniques such as few-shot and self-consistent learning to optimize the LLM's response.
