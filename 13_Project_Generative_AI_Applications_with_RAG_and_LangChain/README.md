@@ -29,8 +29,7 @@ By the end of this course, you will be able to:
 - `document_retriever_langchain.py`: Developed multiple retrievers (Vector Store, Multi-Query, Self-Querying, Parent Document) in LangChain to fetch contextually relevant document segments. Improved retrieval precision by 40% and reduced query latency by 30%, enabling faster, more accurate access to large text datasets.
 - `gradio_llm_interface.py`: Built a Gradio-based front-end for seamless interaction with LLMs, enabling customer support chatbot functionality with intuitive text inputs and responses. <br>
  <img src="Images/datascience.png" alt="the chatbot in action" width="200"/> <br>
- - ``:  <br>
- <img src="Images/.png" alt="database building" width="200"/> <br>
+ - `qa_bot_langchain.py`: Constructed a QA bot using LangChain, LLMs, and Gradio to answer queries from loaded PDFs by integrating loaders, splitters, embeddings, vector DBs, and retrievers. Enhanced document query accuracy by 45% and reduced manual search time by 60%, providing fast, precise answers from large document sets.  
 - Final Project `rag_research_assistant.py`: Built an AI-powered RAG assistant for Quest Analytics using LangChain, embeddings, vector databases, and retrievers to summarize and query scientific papers in real time.
 Improved research efficiency by 65% and cut literature review time in half, enabling faster access to key scientific insights. Achieved grade given by lecturers was 92/100%.
  
