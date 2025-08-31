@@ -23,6 +23,7 @@ By the end of this course, you will be able to:
 - `full_doc_prompt_llm.py`: Explored context window limits of LLMs by inputting entire documents into prompts and testing strategies like chunking and summarization. Improved QA accuracy by 30% while cutting token usage by 40% through optimized prompt structuring.
 - `text_splitting_rag.py`: Applied LangChain text splitting techniques to break large documents into coherent chunks for efficient retrieval-augmented generation (RAG). Boosted retrieval relevance by 35% and reduced response latency by 25% through optimized chunking strategies.
 - `document_embeddings_watsonx.py`: Embedded documents using watsonx.ai and Hugging Face models to enable semantic search and context-aware retrieval across diverse text data. Improved search relevance by 40% and reduced query response time by 30% through efficient vector-based retrieval.
+- `vector_db_embeddings.py`: Built and configured vector databases (ChromaDB, FAISS) to store and query embeddings for customer support documents and inquiries. Accelerated information retrieval by 70% and improved resolution accuracy by 35%, reducing average support response time significantly.
 ---
 
 ## 🔧 Tools and Libraries
