@@ -17,7 +17,7 @@ By the end of this course, you will be able to:
 
 ---
 
-## 📂 Contents: The coding projects I worked on
+## 📂 Contents: The coding projects I worked on (9 projects)
 
 - `langchain_doc_loaders.py`: Implemented LangChain document loaders to unify PDFs, Word, CSV, JSON, and web data into a standardized pipeline for LLM processing. Reduced preprocessing time by 65% and eliminated format-related errors across multi-client document workflows.
 - `full_doc_prompt_llm.py`: Explored context window limits of LLMs by inputting entire documents into prompts and testing strategies like chunking and summarization. Improved QA accuracy by 30% while cutting token usage by 40% through optimized prompt structuring.
