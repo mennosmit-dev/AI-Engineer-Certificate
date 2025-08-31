@@ -26,7 +26,10 @@ By the end of this course, you will be able to:
 - `document_embeddings_watsonx.py`: Embedded documents using watsonx.ai and Hugging Face models to enable semantic search and context-aware retrieval across diverse text data. Improved search relevance by 40% and reduced query response time by 30% through efficient vector-based retrieval.
 - `vector_db_embeddings.py`: Built and configured vector databases (ChromaDB, FAISS) to store and query embeddings for customer support documents and inquiries. Accelerated information retrieval by 70% and improved resolution accuracy by 35%, reducing average support response time significantly. <br>
  <img src="Images/vectordb.png" alt="database building" width="200"/> <br>
-- `vector_db_embeddings.py`: Developed multiple retrievers (Vector Store, Multi-Query, Self-Querying, Parent Document) in LangChain to fetch contextually relevant document segments. Improved retrieval precision by 40% and reduced query latency by 30%, enabling faster, more accurate access to large text datasets.
+- `document_retriever_langchain.py`: Developed multiple retrievers (Vector Store, Multi-Query, Self-Querying, Parent Document) in LangChain to fetch contextually relevant document segments. Improved retrieval precision by 40% and reduced query latency by 30%, enabling faster, more accurate access to large text datasets.
+- `gradio_llm_interface.py`: Built a Gradio-based front-end for seamless interaction with LLMs, enabling customer support chatbot functionality with intuitive text inputs and responses. <br>
+ <img src="Images/datascience.png" alt="database building" width="200"/> <br>
+
 ---
 
 ## 🔧 Tools and Libraries
