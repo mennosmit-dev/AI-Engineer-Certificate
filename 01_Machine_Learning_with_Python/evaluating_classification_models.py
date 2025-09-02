@@ -1,4 +1,5 @@
-""">>>
+""">>>Evaluating classification models, models for predicting tumor being benign or malignant in breast cancer data set, adding gaussian noise for measurement error. 
+Out-of-sample accuracy was KNN 0.926 and 0.971, and f1-score 0.93 and 0.97 for KNN and SVM respecitively.
 
 What is done in the code:
 Evaluating classification models, models for predicting tumor being benign or malignant in breast cancer data set, adding gaussian noise for measurement error. """
