@@ -1,7 +1,6 @@
-"""
-# **Lab: Implementing Transformers for Text Generation**
+""">>>
 
-## Learning Objectives
+What is done in the code:
 - Implement Transformers for text generation tasks
 - Build, train, and evaluate Transformer models for text generation using TensorFlow and Keras
 - Apply text generation in real-world scenarios
