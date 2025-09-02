@@ -1,4 +1,5 @@
-""">>> 
+""">> >Developed a classification model to differentiate betwween recyclable and organic waste (2 classes) based on images. 
+Fine-tuned the VGG16 model for the task which increased the validation accuracy from 84.9% to 92.19% by about 8.6%. 
 
 What is done in the code:
 - Apply transfer learning using the VGG16 model for image classification.
