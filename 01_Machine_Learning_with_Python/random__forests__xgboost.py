@@ -1,4 +1,5 @@
-""">>>
+""">>>Utilising Random Forest and XGBoost to predict housing prices in California. Evaluating both algorithms accuracy and speed. 
+On test: MSE RF was 0.2556 and XGBoost 0.2226, training time/testing time 17.777 versus 0.292 and 0.373 versus 0.016.
 
 What is done in the code:
 Utilising Random Forest and XGBoost to predict housing prices, evaluating their accuracy and speed."""
