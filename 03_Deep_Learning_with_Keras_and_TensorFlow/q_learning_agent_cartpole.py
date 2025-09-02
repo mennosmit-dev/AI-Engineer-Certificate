@@ -1,8 +1,6 @@
 """>>>Setting up a Q-learning agent in cartpole environment and enhancing its performance using various architectures, 
 adaptive exploration schedules and varying goal function agent. Maximum score was 9 steps without failure.
-"""
 
-"""
 What is done in the code
 - Implementubg a Q-Learning algorithm using Keras
 - Defining and training a neural network to approximate the Q-values
