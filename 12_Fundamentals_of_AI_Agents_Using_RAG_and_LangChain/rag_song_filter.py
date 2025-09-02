@@ -1,4 +1,5 @@
-""">>>Developed a RAG-based system in PyTorch using embeddings, retrieval, and generation to assess song appropriateness for children on a social media platform. Achieved scalable, cost-efficient content moderation that improved retrieval accuracy and reduced reliance on full LLM inference.
+""">>>Developed a RAG-based system in PyTorch using embeddings, retrieval, and generation to assess song appropriateness for children on a social media platform. 
+Achieved scalable, cost-efficient content moderation that improved retrieval accuracy and reduced reliance on full LLM inference.
 
 What is done in the code:
 - **Embedding techniques**: Generating and using embeddings from pre-trained models for natural language processing tasks.
