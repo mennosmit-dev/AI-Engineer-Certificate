@@ -1,8 +1,6 @@
-"""
-# **Lab: Implementing Diffusion Models**
+""">>>
 
-## Learning Objectives
-By the end of this lab, you will:
+What is done with the code:
 - Acquire practical understanding of diffusion model architectures, data processing, model training, and performance evaluation
 - Implement, train, and evaluate diffusion models using Keras
 ----
