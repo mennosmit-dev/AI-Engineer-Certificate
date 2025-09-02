@@ -1,4 +1,5 @@
-""">>>
+""">>>Build and trained a baby BERT model for Next Sentence Prediction (NSP) and Masked Language Modelling (MLM) for conceptual understanding. 
+The model did not perform that well mostly due to the relatively small number of parameters and data on which it was trained, it was apparent however that the model had language understanding (for example see image).
 
 What is done in the code:
 - **Demystify tokenization**: Introduce the critical first step in processing text for Natural Language Processing (NLP) — tokenization. We'll learn how to convert raw text into a format that's amenable to machine processing.
