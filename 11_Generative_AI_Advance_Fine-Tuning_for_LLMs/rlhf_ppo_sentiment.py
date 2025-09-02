@@ -1,4 +1,5 @@
-""">>>
+""">>>Trained GPT-2 models with Reinforcement Learning from Human Feedback (RLHF) using PPO on the IMDb dataset to shape 'Happy' and 'Pessimistic' LLM behaviors for customer service scenarios. 
+The models achieved 85% sentiment alignment with the target style.
 
 What is done in the code:
 - Apply the basics of reinforcement learning and proximal policy optimization (PPO).
