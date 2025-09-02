@@ -1,7 +1,7 @@
-""">>>
+""">>>Final project: for a KAGGLE data set predicting wether there will be rainfall using random forest and logistic regression. This time random forest was slightly better (accuracy 83% over 81%). Doing this by feature engineering, a classifier pipeline with grid-search, performance measures and evaluations, different classifiers (updating the pipeline), hyperparameter tuning. Scored 16/20 points (80/100%) by AI evaluation system. Interested in the most important signals?
 
 What is done in the code:
-Final project: for a KAGGLE data set predicting rainfall. Doing this by feature engineering, a classifier pipeline with grid-search, performance measures and evaluations, different classifiers (updating the pipeline), hyperparameter tuning. Scored 16/20 points (80/100%) by AI evaluation system.
+For a KAGGLE data set predicting rainfall. Doing this by feature engineering, a classifier pipeline with grid-search, performance measures and evaluations, different classifiers (updating the pipeline), hyperparameter tuning.
 """
 
 !pip install numpy
