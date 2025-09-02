@@ -1,4 +1,4 @@
-""">>>Modified a VGG16 model to detect cracks in conrete buildings which are difficult to see with the eye.
+""">>>Building a seq-to-seq transormer with self-attention to perform English to Spanish translation (achieved 100% accuracy on a small set of predefined text pairs).
 
 What is done in the code:
 We use the Keras library to build a transformer using a sequence-to-sequence architecture with self-attention for translation. We will train the model using a sample dataset and then use this model for English to Spanish translation.
