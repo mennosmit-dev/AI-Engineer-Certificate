@@ -1,4 +1,6 @@
-"""
+""">>>
+
+What is done in the code:
 In this lab, we will learn how to use the Keras library to build convolutional neural networks. We will also use the popular MNIST dataset and we will compare our results to using a conventional neural network.
 Let's start by installing the keras libraries and the packages that we would need to build a neural network.
 """
