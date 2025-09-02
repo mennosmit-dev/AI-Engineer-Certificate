@@ -1,4 +1,5 @@
-""">>>
+""">>>Fine-tuned large language models using Direct Preference Optimization (DPO) with Hugging Face’s trl library to better align outputs with human preferences. 
+Implemented dataset preparation, training, and evaluation to improve model performance in real-world NLP tasks.
 
 What is done in the code:
 - Understand the fundamentals of DPO and how it is different from proximal policy optimization (PPO)
