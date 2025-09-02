@@ -1,5 +1,7 @@
+""">>>
 
-"""Evaluating classification models, models for predicting tumor being benign or malignant in breast cancer data set, adding gaussian noise for measurement error. """
+What is done in the code:
+Evaluating classification models, models for predicting tumor being benign or malignant in breast cancer data set, adding gaussian noise for measurement error. """
 
 !pip install numpy==2.2.0
 !pip install pandas==2.2.3
