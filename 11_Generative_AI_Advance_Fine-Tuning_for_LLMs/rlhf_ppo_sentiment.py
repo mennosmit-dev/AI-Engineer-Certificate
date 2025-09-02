@@ -1,5 +1,6 @@
-"""
-Objectives
+""">>>
+
+What is done in the code:
 - Apply the basics of reinforcement learning and proximal policy optimization (PPO).
 - Set up the environment and load the IMDb dataset for training.
 - Define and configure the PPO agent and tokenizer.
