@@ -1,4 +1,5 @@
-""">>>
+""">>> Predicting handrwitten digits in MNIST dataset using a convolutational NN (CNN). 
+Highest accuracy obtained 0.9977 (two sets of convolutional and pooling layers).
 
 What is done in the code:
 In this lab, we will learn how to use the Keras library to build convolutional neural networks. We will also use the popular MNIST dataset and we will compare our results to using a conventional neural network.
