@@ -1,4 +1,5 @@
-""">>>
+""">>>Fully build and trained a custom small-scale GPT model (due to limited comput. resources) to generate text based on user input, and saw from experimentation that 
+it performed similar to the GPT2 from HuggingFace on a variety of tasks which was trained on a massive dataset with enormous computational resources.
 
 What is done in the code:
 - Understand how to pick random samples from your data and break text down into tokens.
