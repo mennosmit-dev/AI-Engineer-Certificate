@@ -1,7 +1,7 @@
-""">>>Built a Retriever-Augmented Generation pipeline with DPR and GPT2 to create an intelligent HR policy Q&A tool. The system reduced employee query resolution time by 70% by delivering instant, accurate answers from policy documents.
+""">>>Developed a RAG-based system in PyTorch using embeddings, retrieval, and generation to assess song appropriateness for children on a social media platform. Achieved scalable, cost-efficient content moderation that improved retrieval accuracy and reduced reliance on full LLM inference.
 
 What is done in the code:
-- **Understand embedding techniques**: Learn how to generate and use embeddings from pre-trained models for natural language processing tasks.
+- **Embedding techniques**: Generating and using embeddings from pre-trained models for natural language processing tasks.
 - **Use Hugging Face Transformers with PyTorch**: Apply the transformers library to load and work with advanced NLP models like BERT in PyTorch..
 - **Apply t-SNE for visualization**: Use t-SNE to visualize high-dimensional data in lower-dimensional spaces, enhancing understanding of data distribution and clustering.
 - **Fine-tuning language models**: Gain practical experience in fine-tuning pretrained language models for specific tasks, enhancing model performance on targeted datasets.
