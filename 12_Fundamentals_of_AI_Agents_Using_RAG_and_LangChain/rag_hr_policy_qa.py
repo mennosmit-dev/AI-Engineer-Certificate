@@ -1,5 +1,6 @@
-"""
-Objectives
+""">>>Fine-tuned a PyTorch model with LoRA, first leveraging AG News pretraining, then adapted it to IMDB for sentiment analysis — achieving strong performance 92% accuracy on movie reviews.
+
+What is done in the code:
 - **Understand the concept and components:** Grasp the fundamentals of Retriever-Augmented Generation (RAG), focusing on how retrieval and generation techniques are combined in natural language processing (NLP).
 - **Implement Dense Passage Retriever (DPR):** Learn to set up and use DPR to efficiently retrieve documents from a large dataset, which is crucial for feeding relevant information into generative models.
 - **Integrate sequence-to-sequence models:** Explore integrating sequence-to-sequence models such as GPT2 to generate answers based on the contexts provided by DPR, enhancing the accuracy and relevance of responses.
