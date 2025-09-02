@@ -1,4 +1,7 @@
-"""Predicting whether a passenger of titanic survived based on attributes, implemented using ML Pipeline. Random forest and logistic regression are compared."""
+""">>>
+
+What is done in the code:
+Predicting whether a passenger of titanic survived based on attributes, implemented using ML Pipeline. Random forest and logistic regression are compared."""
 
 !pip install numpy
 !pip install matplotlib
