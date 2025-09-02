@@ -1,5 +1,7 @@
-"""
-In this lab, we will learn how to use the Keras library to build a transformer using a sequence-to-sequence architecture with self-attention for translation. We will train the model using a sample dataset and then use this model for English to Spanish translation.
+""">>>Modified a VGG16 model to detect cracks in conrete buildings which are difficult to see with the eye.
+
+What is done in the code:
+We use the Keras library to build a transformer using a sequence-to-sequence architecture with self-attention for translation. We will train the model using a sample dataset and then use this model for English to Spanish translation.
 """
 !pip install tensorflow==2.17.1
 !pip install matplotlib==3.9.2
