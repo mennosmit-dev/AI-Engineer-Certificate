@@ -2,7 +2,7 @@
 Random forest and logistic regression are compared, Random forest scores weight average f1 score of 0.81 and accuracy of 0.82 while logistic regression 0.86 and 0.83, suggesting that the second provides a better fit.
 
 What is done in the code:
-Predicting whether a passenger of titanic survived based on attributes, implemented using ML Pipeline. Random forest and logistic regression are compared."""
+Predicting whether a passenger of titanic survived based on attributes, implemented using ML Pipeline that involves Random forest and logistic regression."""
 
 !pip install numpy
 !pip install matplotlib
