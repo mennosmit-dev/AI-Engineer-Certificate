@@ -1,4 +1,6 @@
-"""Objectives
+""">>>
+
+What is done in the code:
 - Combine multiple components, such as document loaders, text splitters, embedding models, and vector databases, to construct a fully functional QA bot
 - Leverage LangChain and LLMs to solve the problem of retrieving and answering questions based on content from large PDF documents
 
