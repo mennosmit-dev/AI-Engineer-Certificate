@@ -1,4 +1,7 @@
-"""Utilising Random Forest and XGBoost to predict housing prices, evaluating their accuracy and speed."""
+""">>>
+
+What is done in the code:
+Utilising Random Forest and XGBoost to predict housing prices, evaluating their accuracy and speed."""
 
 !pip install numpy==2.2.0
 !pip install scikit-learn==1.6.0
