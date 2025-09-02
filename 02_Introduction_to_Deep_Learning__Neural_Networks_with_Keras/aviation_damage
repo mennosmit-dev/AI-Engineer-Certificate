@@ -1,4 +1,5 @@
-""">>>
+""">>>Classifying aircraft damage using a pre-trained VGG16 model (16 layers) and the RESNET model which I both fine-tuned (highest val. accuracy 68.8%) . 
+Also generating captions using a pretrained transformer model from BLIP (huggingface).
 
 What is done in the code:
 # Final Project: Classification and Captioning Aircraft Damage Using Pretrained Models
