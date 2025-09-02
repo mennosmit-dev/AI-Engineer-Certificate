@@ -1,4 +1,5 @@
-""">>>
+""">>>Modified a VGG16 model to detect cracks in conrete buildings which are difficult to see with the eye.
+
 
 What is done in the code:
 Leveraging pre-trained models to build image classifiers instead of building a model from scratch.
