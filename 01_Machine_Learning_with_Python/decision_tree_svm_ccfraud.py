@@ -1,4 +1,4 @@
-""">>>
+""">>>Building a decision tree for prescribing the correct medical drug. Final result 81.7% accuracy on test set for six medicine.
 
 What is done in the code:
 Support Vector Machine (SVM) and Decision trees: Credit Card Fraud Detection using python APIs for a Kaggle Data set, utilising hinge loss, obtained a SVM ROC-AUC score: 0.986."""
