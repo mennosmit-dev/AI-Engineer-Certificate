@@ -1,5 +1,4 @@
-""">>>Build and trained a baby BERT model for Next Sentence Prediction (NSP) and Masked Language Modelling (MLM) for conceptual understanding. 
-The model did not perform that well mostly due to the relatively small number of parameters and data on which it was trained, it was apparent however that the model had language understanding (for example see image).
+""">>>Fine-tuned a PyTorch model with LoRA, first leveraging AG News pretraining, then adapted it to IMDB for sentiment analysis — achieving strong performance 92% accuracy on movie reviews.
 
 What is done in the code:
 - Construct and train a neural network from the ground up
