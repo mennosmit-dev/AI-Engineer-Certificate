@@ -1,5 +1,4 @@
-"""
->>>Implemented a deep Q-Network in CartPole-v1, approximated Q-values via network(instead of table), 
+""">>>Implemented a deep Q-Network in CartPole-v1, approximated Q-values via network(instead of table), 
 trained network using memory, made a replay buffer. Scored a maximum of 43 steps without failure 
 (+ ~400% compared to q_learning_agent_cartpole.py) due to more effective learning.
 
