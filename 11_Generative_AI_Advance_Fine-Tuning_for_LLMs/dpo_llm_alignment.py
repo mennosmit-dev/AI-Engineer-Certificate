@@ -1,5 +1,6 @@
-"""
-Objectives
+""">>>
+
+What is done in the code:
 - Understand the fundamentals of DPO and how it is different from proximal policy optimization (PPO)
 - Set up an environment by installing and configuring necessary tools and libraries, such as trl library from Hugging Face
 - Prepare a suitable environment for running DPO experiments with LLMs
