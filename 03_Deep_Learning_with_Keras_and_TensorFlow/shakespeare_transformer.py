@@ -1,4 +1,5 @@
-""">>>
+""">>>Building, training and evaluting a transformer model for generating Shakespearian sonnets. 
+Led to realistic variations of the original work from Shakespeare.
 
 What is done in the code:
 - Implement Transformers for text generation tasks
