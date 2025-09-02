@@ -1,7 +1,7 @@
-"""
-## Objective
+""">>>
 
-In this lab, you will learn how to leverage pre-trained models to build image classifiers instead of building a model from scratch.
+What is done in the code:
+Leveraging pre-trained models to build image classifiers instead of building a model from scratch.
 
 ## Import Libraries and Packages
 
