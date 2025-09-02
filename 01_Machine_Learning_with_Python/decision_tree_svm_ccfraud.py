@@ -1,4 +1,7 @@
-"""Support Vector Machine (SVM) and Decision trees: Credit Card Fraud Detection using python APIs for a Kaggle Data set, utilising hinge loss, obtained a SVM ROC-AUC score: 0.986."""
+""">>>
+
+What is done in the code:
+Support Vector Machine (SVM) and Decision trees: Credit Card Fraud Detection using python APIs for a Kaggle Data set, utilising hinge loss, obtained a SVM ROC-AUC score: 0.986."""
 
 !pip install pandas==2.2.3
 !pip install scikit-learn==1.6.0
