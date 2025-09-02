@@ -1,4 +1,4 @@
-""">>>Fine-tuned a PyTorch model with LoRA, first leveraging AG News pretraining, then adapted it to IMDB for sentiment analysis — achieving strong performance 92% accuracy on movie reviews.
+""">>>Built a Retriever-Augmented Generation pipeline with DPR and GPT2 to create an intelligent HR policy Q&A tool. The system reduced employee query resolution time by 70% by delivering instant, accurate answers from policy documents.
 
 What is done in the code:
 - **Understand the concept and components:** Grasp the fundamentals of Retriever-Augmented Generation (RAG), focusing on how retrieval and generation techniques are combined in natural language processing (NLP).
