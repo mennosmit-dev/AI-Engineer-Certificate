@@ -1,7 +1,6 @@
-"""Final Proj-Classify Waste Products Using TL FT.ipynb
-The aim of the project is to develop an automated waste classification model that can accurately differentiate between recyclable and organic waste based on images. By the end of this project, you will have trained, fine-tuned, and evaluated a model using transfer learning, which can then be applied to real-world waste management processes.
+""">>> 
 
-Objectives:
+What is done in the code:
 - Apply transfer learning using the VGG16 model for image classification.
 - Prepare and preprocess image data for a machine learning task.
 - Fine-tune a pre-trained model to improve classification accuracy.
