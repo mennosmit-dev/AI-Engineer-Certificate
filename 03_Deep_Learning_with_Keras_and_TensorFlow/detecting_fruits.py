@@ -1,8 +1,6 @@
-"""
-# Practice Project: Fruit Classification Using Transfer Learning
-**Estimated Time Needed:** 90 minutes
+""">>>
 
-### Learning objectives
+What is done in the code:
 At the end of the project, you will be able to:
 - Set up and organize a complex fruit image dataset.
 - Use transfer learning with the VGG16 model.
