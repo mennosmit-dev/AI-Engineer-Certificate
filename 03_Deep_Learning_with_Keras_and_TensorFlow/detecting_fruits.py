@@ -1,4 +1,4 @@
-""">>> Developed a classifcation model to detect fruits (24 types), finetuned based on VGG16 model. 
+""">>>Developed a classifcation model to detect fruits (24 types), finetuned based on VGG16 model. 
 By fine-tuning increased vaidation accuracy from 58% to 90.05% meaning rougly 57% increase. 
 Used advanced data augmentation techniques for the supervised part to improve generalisation.
 
