@@ -4,7 +4,6 @@ This repository contains my completed projects for the IBM AI Engineer Professio
 While I am fully aware of PEP8 standards and best practices, please note that some files may not strictly adhere to them as they were 
 prewritten by IBM.
 
-The completed certificate can be downloaded under 'Certificate_AI_Engineer'.
 
 ## 📚 Courses
 
