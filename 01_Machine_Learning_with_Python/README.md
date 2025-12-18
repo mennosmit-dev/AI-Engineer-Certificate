@@ -13,7 +13,7 @@ By the end of this course, you will be able to:
 - Evaluate model performance using metrics such as ROC-AUC, accuracy, confusion matrices, and clustering evaluation techniques including Voronoi diagrams and silhouette scores.
 - Apply regularization techniques (Ridge and LASSO) for regression and feature selection, and build end-to-end machine learning pipelines with hyperparameter tuning using GridSearchCV.
 - Build basic recommender systems and classification models for complex datasets, including Titanic survival prediction and rainfall forecasting, leveraging real-world data and competitive benchmarks.
--Use Python libraries like Pandas, Scikit-learn, Matplotlib, and Seaborn to process data, build, and evaluate machine learning models effectively and reproducibly.
+- Use Python libraries like Pandas, Scikit-learn, Matplotlib, and Seaborn to process data, build, and evaluate machine learning models effectively and reproducibly.
 
 ---
 
