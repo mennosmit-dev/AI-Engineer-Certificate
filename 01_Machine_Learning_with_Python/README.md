@@ -24,7 +24,7 @@ By the end of this course, you will be able to:
 - `logistic_regression`: Predicting churn of customers in telecommunications company.<p>
    <img src="Images/feature_importance.png" alt="Churn_importances" width="170"/> 
 - `multi_class_classification.py`: Multi-Class Classification: building the OvsAll, OvsO and mulinomial logistic regressions for obesitas level prediction (eight classes). Going from OvA to OvO increased accuracy test set from 76% to 92%.
-- `decision_trees.py`: Building a decision tree for prescribing the correct medical drug. Final result 81.7% accuracy on test set for six medicine.<p>
+- `decision_trees.py`: Building a decision tree for prescribing the correct medical drug. Final result 98.3% accuracy on test set for six medicine.<p>
    <img src="Images/decision_trees_new.png" alt="Distribution drug" width="170"/> 
 - `regression_trees_taxi_tip.py`: Predicting the taxi tip. R-squared was relatively low due to the high amount of noise in the tip, which meant that decresing the max_depth of the tree improved OOS MSE by 10%. 
 - `decision_tree_svm_ccfraud.py`: For the Kaggle Data set 'Credit Card Fraud Detection' with Decision Trees and SVM using python APIs, utilising hinge loss, obtained a SVM ROC-AUC score: 0.986.
