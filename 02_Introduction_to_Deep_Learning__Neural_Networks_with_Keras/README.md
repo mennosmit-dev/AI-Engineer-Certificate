@@ -24,7 +24,7 @@ By the end of this course, you will be able to:
 
 ## 📂 Contents: The coding projects I worked on (8 projects)
 - Three projects for building more intuïtion for forward propagation, backpropogation, vanishing gradient, and activation functions **(but focus on intuïtion and not applicable directly in real word so left it out)**.
-- `concrete_compressive_strength.py`: Building a regression model in Keras involving multiple hidden layers with ReLu and the Adam optimiser, predicting the total compressive strenght based on attributes. Final MSE_validation was 25.89 (10/90 train-test best results).
+- `concrete_compressive_strength.py`: Building a regression model in Keras involving multiple hidden layers with ReLu and the Adam optimiser, predicting the total compressive strenght based on attributes. Final MSE_validation was 25.89 (90/10 train-val best results).
 - `conventionalnn_mnist`: Predicting handrwitten digits in MNIST dataset using a conventional NN (NN). Highest accuracy obtained 0.995 (two hidden layers).
 - `convolutionalnn_mnist`: Predicting handrwitten digits in MNIST dataset using a convolutational NN (CNN). Highest accuracy obtained 0.9977 (two sets of convolutional and pooling layers).
 - `transformer_seq2seq_translation`: Building a seq-to-seq transormer with self-attention to perform English to Spanish translation (achieved 100% accuracy on a small set of predefined text pairs). 
