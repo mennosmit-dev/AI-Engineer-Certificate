@@ -21,7 +21,7 @@ By the end of this course, you will be able to:
 ## 📂 Contents: The coding projects I worked on (3 projects):
 
 - Two projects including data loading in keras and data preparation.
-- `concrete_vgg16.py`: Modified a VGG16 model to detect cracks in conrete buildings which are difficult to see with the eye.<br>
+- `concrete_resnet50.py`: Modified a ResNet50 model to detect cracks in conrete buildings which are difficult to see with the eye.<br>
 <img src="Images/crack.png" alt="A building surface with a small crack." width="200"/>
 ---
 
