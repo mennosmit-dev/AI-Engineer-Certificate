@@ -16,7 +16,7 @@ By the end of this course, you will be able to:
 ---
 
 ## 📂 Contents: The coding projects I worked on (3 projects)
-- `hugging_models._chatbot.py`: Experimented with several Hugging Face Models to build chatbots. This included "facebook/blenderbot-400M-distill", "flan-t5-base", "google/flan-t5-small", and "facebook/bart-base".
+- `hugging_models_chatbot.py`: Experimented with several Hugging Face Models to build chatbots. This included "facebook/blenderbot-400M-distill", "flan-t5-base", "google/flan-t5-small", and "facebook/bart-base".
 - `implementing_tokenization.py`: Applying several tokenisation strategies including NLTK, SPACY, BERT (Unigram and SentencePiece) and XLNetTokenizer (and torchtext).
 - `data_loader_translation.py`: Using an NLP Data Loader to translate Spanisch <-> English (Multi30k). <br>
 <img src="Images/translate.png" alt="Translation Spanisch<->English.." width="200"/>
