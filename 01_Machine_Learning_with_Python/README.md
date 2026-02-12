@@ -17,7 +17,7 @@ By the end of this course, you will be able to:
 
 ---
 
-## 📂 Contents: The coding projects I worked on (20 projects).
+## 📂 Contents: The coding projects I worked on.
 
 - `simple_linear_regression.py`: Using simple Linear Regression to predict co2 omission for a car (part 1). Best R-squared 0.68.
 - `mulitple-linear-regression`: Predicting co2 omission for car using several features simulateneously (part 2). Best R-Squared 0.89. 
