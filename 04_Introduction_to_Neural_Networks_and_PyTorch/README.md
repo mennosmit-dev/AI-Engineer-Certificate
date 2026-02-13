@@ -1,50 +1,52 @@
-# Course 4: Introduction to Neural Networks and PyTorch
+# Introduction to Neural Networks with PyTorch – Project Implementations
 
-This folder contains coursework and projects completed for the **[Introduction to Neural Networks and PyTorch](https://www.coursera.org/learn/deep-neural-networks-with-pytorch?specialization=ai-engineer)** course, part of the [IBM AI Engineer Professional Certificate](https://www.coursera.org/professional-certificates/ai-engineer) on Coursera.
+This folder contains neural network implementations developed during the  
+**IBM AI Engineering Professional Certificate**.
 
-## 🧠 Course Description
-
-This course provides a practical and theoretical foundation in deep learning using PyTorch. Learners are introduced to fundamental neural network concepts and architectures including feedforward networks, activation functions, loss functions, backpropagation, and optimizers.
-
-By the end of this course, you will be able to:
-
-- Understand and implement key neural network components, such as layers, activation functions (ReLU, Sigmoid, Tanh), and loss functions (MSE, CrossEntropy).
-- Build and train deep neural networks using PyTorch, using real-world datasets like MNIST.
-- Apply key techniques such as backpropagation and stochastic gradient descent (SGD) for weight updates.
-- Utilize PyTorch modules including `torch.nn`, `torch.optim`, `torch.utils.data`, and `torchvision`.
-- Perform forward and backward passes manually and with autograd for educational understanding and debugging.
-- Evaluate neural network performance using metrics like accuracy, and visualize training curves using Matplotlib.
-- Understand and implement techniques to prevent overfitting including dropout and data augmentation.
-- Prepare custom datasets using PyTorch `Dataset` and `DataLoader` for flexible and efficient training pipelines.
+The focus of this module was building a strong PyTorch foundation, covering 
+model construction, training workflows, optimization, and dataset handling 
+using real-world classification tasks.
 
 ---
 
-## 📂 Contents: The coding projects I worked on (19 projects):
+## 🧠 Overview
 
-- Seventeen projects for building fundamental knowledge in pytorch: about 1D tensors, two-dimensinal tensors, derrivatives, loading existing datasets(f.e. MNIST), linear regression (3 labs), SGD, mini-batch SGD, optimisation, training and validating via DataLoader and hyperparameter tuning loops, linear regression with high dimensionality and many outputs (4 labs), logistic regression, cross-entropy **(but focus on intuïtion and learning and not applicable directly in real word so left it out)**. 
-- `breast_cancer_classification.py`: Using a variety of neural network configurations to predict whether brain cells are benign or malignant. Highest obtained test accuracy was 97.5%.
-- `league_of_legends_outcome_prediction.py`: Build a logistic regression to predict the outcome of a LOL match based on in-game statistics. Utilising weight_decay(momentum) led to a negligable improvement in test accuracy.<br>
-<img src="Images/ROC_test.png" alt="For non-momentum model over test set" width="100"/> <img src="Images/classification_report_test.png" alt="For non-momentum model over test set" width="170"/> <img src="Images/confusion_momentum_test.png" alt="For non-momentum model over test set" width="100"/>
+Key areas explored:
 
+- Neural network fundamentals using PyTorch
+- Model training with SGD and optimization strategies
+- Custom datasets and DataLoader pipelines
+- Autograd mechanics and backpropagation
+- Regularization techniques and evaluation workflows
 
-
-
-
-
-
----
-
-## 🔧 Tools and Libraries
-
-- Python
-- Jupyter Notebooks
-- PyTorch
-- Torchvision
-- NumPy
-- Matplotlib
+Several smaller lab-style experiments were completed to build intuition 
+around tensors, gradients, and optimization; only the more applied 
+implementations are highlighted here.
 
 ---
 
-## 📌 Certificate Series
+## 📂 Selected Implementations
 
-This is the fourth course in the [IBM AI Engineer Professional Certificate](https://www.coursera.org/professional-certificates/ai-engineer).
+### 🔹 Classification Models
+
+- `breast_cancer_classification.py`  
+  Neural network architectures for tumor classification.  
+  Best test accuracy: **97.5%**.
+
+- `league_of_legends_outcome_prediction.py`  
+  Logistic regression model predicting match outcomes from gameplay statistics.  
+  Explored weight decay and optimization strategies.
+
+---
+
+## 🔧 Tools & Libraries
+
+Python • PyTorch • Torchvision • NumPy • Matplotlib • Jupyter
+
+---
+
+## 📌 Context
+
+This module establishes the PyTorch foundation within the  
+IBM AI Engineering Professional Certificate and supports later work 
+in reinforcement learning, transformers, and applied deep learning systems.
