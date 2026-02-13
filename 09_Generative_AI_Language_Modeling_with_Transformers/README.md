@@ -1,47 +1,89 @@
-# Course 9: Generative AI Language Modeling with Transformers
+# Generative AI Language Modeling with Transformers – Project Implementations
 
-This folder contains coursework and projects completed for the **[Generative AI Language Modeling with Transformers](https://www.coursera.org/learn/generative-ai-language-modeling-with-transformers?specialization=ai-engineer)** course, part of the [IBM AI Engineer Professional Certificate](https://www.coursera.org/professional-certificates/ai-engineer) on Coursera.
+This folder contains transformer-based language modeling implementations developed during the  
+**IBM AI Engineering Professional Certificate**.
 
-## 🧠 Course Description
-
-This course provides an in-depth overview of transformer-based models for natural language processing (NLP). Learners explore both encoder and decoder architectures, focusing on their applications in tasks like text classification and language translation.
-
-By the end of this course, you will be able to:
-
-- Explain attention mechanisms in transformers and their role in capturing contextual information.
-- Describe language modeling using decoder-based models like GPT and encoder-based models like BERT.
-- Implement positional encoding, masking, and attention mechanisms in PyTorch.
-- Utilize transformer-based models for text classification and language translation tasks.
+The focus of this module was building and experimenting with encoder and decoder transformer 
+architectures, including custom GPT-style models, BERT-style models, and translation systems.
 
 ---
 
-## 📂 Contents: The coding projects I worked on (6 projects)
+## 🧠 Overview
 
-- `attention_pos_encoding_models.py`: Experimented with attention mechanism for translation models and more general setups involing multi-head attention. Also experimented with several postitional encoding layers, and with Transformer Encoder and Decoder models, building a broad intuïtion around it. <br>
-<img src="Images/cos_sin_waves.png" alt="cosinus_sinus_waves" width="200"/> <br>
-- `archive_classifier.py`: Rigorously build a custom transformer model to spit through large archives of documents and classify the documents under five distinct categories, scoring over 80% accuracy. The model consists of an embedding layer, positional encoding layer (tried several to see which worked best), and two sequential transformer encoders followed by linear layer.
-- `gpt_text_generator.py`: Fully build and trained a custom small-scale GPT model (due to limited comput. resources) to generate text based on user input, and saw from experimentation that it performed similar to the GPT2 from HuggingFace on a variety of tasks which was trained on a massive dataset with enormous computational resources. <br>
-<img src="Images/model_training_gpt.png" alt="model_training_loss" width="200"/> <br>
-- `baby_bert.py`: Build and trained a `baby` BERT model for Next Sentence Prediction (NSP) and Masked Language Modelling (MLM) for conceptual understanding. The model did not perform that well mostly due to the relatively small number of parameters and data on which it was trained, it was apparent however that the model had language understanding (for example see image). 
-- `bert_data_fetching.py`: Build a series of functions dedicated to turn plain text into BERT input data, as was used for example for the previous project, and can be used for very large datasets too. <br>
-<img src="Images/bert_input_generator.png" alt="transformed input data" width="200"/> <br>
-- `transformer_translate_model.py`: Designed, build and trained, and evaluated an advanced translator transformer-based encoder-decoder architecture to translate an input PDF German language written document into English. BLUE score for many samples was 1.0 or close to. <br>
-<img src="Images/model_translation.png" alt="transformed input data" width="200"/> <br>
+Key areas explored:
 
+- Attention mechanisms and positional encoding
+- Transformer encoder and decoder architectures
+- Custom GPT-style language modeling
+- BERT-style masked language modeling and NSP
+- Sequence-to-sequence translation pipelines
 
----
-
-## 🔧 Tools and Libraries
-
-- Python
-- Jupyter Notebooks
-- PyTorch
-- Hugging Face Transformers
-- NumPy
-- Matplotlib
+These projects extend foundational NLP work toward practical transformer engineering 
+and generative AI systems.
 
 ---
 
-## 📌 Certificate Series
+## 📂 Selected Implementations
 
-This is the ninth course in the [IBM AI Engineer Professional Certificate](https://www.coursera.org/professional-certificates/ai-engineer).
+### 🔹 Attention & Transformer Architecture
+
+- `attention_pos_encoding_models.py`  
+  Implemented multi-head attention, positional encoding strategies, and 
+  transformer encoder/decoder experimentation.
+
+<img src="Images/cos_sin_waves.png" width="220"/>
+
+---
+
+### 🔹 Transformer-Based Classification
+
+- `archive_classifier.py`  
+  Custom transformer model for document classification across five categories.  
+  Architecture: embeddings → positional encoding → stacked transformer encoders → linear head.  
+  Achieved **80%+ accuracy**.
+
+---
+
+### 🔹 Custom GPT Language Model
+
+- `gpt_text_generator.py`  
+  Built and trained a lightweight GPT-style model due to limited compute resources.  
+  Generated text with performance comparable to small Hugging Face GPT-2 baselines on controlled tasks.
+
+<img src="Images/model_training_gpt.png" width="220"/>
+
+---
+
+### 🔹 BERT-Style Modeling
+
+- `baby_bert.py`  
+  Custom BERT implementation for Masked Language Modeling (MLM) and Next Sentence Prediction (NSP).
+
+- `bert_data_fetching.py`  
+  Data preprocessing utilities for converting raw text into BERT-ready inputs.
+
+<img src="Images/bert_input_generator.png" width="240"/>
+
+---
+
+### 🔹 Transformer Translation
+
+- `transformer_translate_model.py`  
+  Encoder–decoder transformer translating German → English documents.  
+  Achieved BLEU scores close to **1.0** on several samples.
+
+<img src="Images/model_translation.png" width="240"/>
+
+---
+
+## 🔧 Tools & Libraries
+
+Python • PyTorch • Hugging Face Transformers • NumPy • Matplotlib
+
+---
+
+## 📌 Context
+
+This module represents the transformer engineering component of the  
+IBM AI Engineering Professional Certificate and supports later work in 
+LLM alignment, RAG systems, and production-oriented generative AI pipelines.
