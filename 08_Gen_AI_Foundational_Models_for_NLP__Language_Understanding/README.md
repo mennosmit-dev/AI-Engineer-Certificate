@@ -1,42 +1,74 @@
-# Course 8: Gen AI Foundational Models for NLP & Language Understanding
+# Gen AI Foundational Models for NLP & Language Understanding – Project Implementations
 
-This folder contains coursework and projects completed for the **[Gen AI Foundational Models for NLP & Language Understanding](https://www.coursera.org/learn/gen-ai-foundational-models-for-nlp-and-language-understanding?specialization=ai-engineer)** course, part of the [IBM AI Engineer Professional Certificate](https://www.coursera.org/professional-certificates/ai-engineer) on Coursera.
+This folder contains NLP and foundational language model implementations developed during the  
+**IBM AI Engineering Professional Certificate**.
 
-## 🧠 Course Description
-
-This course provides a comprehensive introduction to foundational models in natural language processing (NLP) and language understanding. Learners explore various techniques for text representation and model architectures used in NLP tasks.
-
-By the end of this course, you will be able to:
-
-- Explain how to use one-hot encoding, bag-of-words, embedding, and embedding bags to convert words to features.
-- Build and use Word2Vec models for contextual embedding.
-- Build and train a simple language model with a neural network.
-- Utilize N-gram and sequence-to-sequence models for document classification, text analysis, and sequence transformation.
+The focus of this module was building practical intuition for text representations, embeddings, 
+and early language modeling techniques that underpin modern transformer architectures.
 
 ---
 
-## 📂 Contents: The coding projects I worked on (5 projects)
+## 🧠 Overview
 
-- `classifying_document.py`: Building a large-scale document classifier with EmbeddingBag layer and softmax output layer, trained on the AG_NEWS dataset with a data loader, visualised using 3D t-SNE. Final test accuracy was 84% over 4 distinct classes.
-- `n_gram_analysis_models.py`: Building an N-gram Histogram model in NTLK to uncover word patterns in 90s rap. Utilised monogram, bigram, and trigram analysis of which the latter performs best, but limited compared to more advanced models as we will see next.
-- `FNN_LanguageModel.py`: Building a gneral feed forward neural network (FNN) to predict rap words, which works significantly better than previous approach. Compared 2-gram, 4-gram, and 8-gram in terms of their perplexity over training epoch, see below for results. <br>
-<img src="Images/embeddings 4-gram.png" alt="Embeddings" width="200"/>  <img src="Images/perplexity.png" alt="Perplexity" width="200"/>
-- `Word2VecModels.py`: Build several Word2Vec models including CBOW and Skip-gram based on a toy rap dataset, in addition implemented the Standford Glove model. Visulaised the resulting embeddings via t-SNE 2D embeddings. Over 400 epoch CBOW significantly outperformed Skip-gram with a nearly zero cross-entropy versus around 3. This can be explained by the limited occurence of rare words. <br>
-<img src="Images/CBOW_embeddings.png" alt="CBOW embeddings" width="200"/> <br>
-- `Word2VecApplications.py`: Implemented Stanfords GloVe model and trained a word2vec using the gensim library. Finally, used the optimised embeddings to predict the category of AG_NEWS articles, which led to 64.6% accuracy over 10 epoch.
+Key areas explored:
 
----
+- Word embeddings and feature representations (EmbeddingBag, Word2Vec, GloVe)
+- N-gram language modeling
+- Feed-forward neural language models
+- Document classification pipelines
+- Embedding visualization using t-SNE
 
-## 🔧 Tools and Libraries
-
-- Python
-- Jupyter Notebooks
-- PyTorch
-- NumPy
-- Matplotlib
+These projects establish the NLP foundations used later in transformer fine-tuning, alignment, 
+and retrieval-augmented generation systems.
 
 ---
 
-## 📌 Certificate Series
+## 📂 Selected Implementations
 
-This is the eighth course in the [IBM AI Engineer Professional Certificate](https://www.coursera.org/professional-certificates/ai-engineer).
+### 🔹 Document Classification & Embeddings
+
+- `classifying_document.py`  
+  Document classifier using EmbeddingBag + softmax trained on the **AG_NEWS** dataset.  
+  Achieved **84% test accuracy** across four classes.
+
+---
+
+### 🔹 N-gram & Neural Language Modeling
+
+- `n_gram_analysis_models.py`  
+  Monogram, bigram, and trigram analysis exploring linguistic patterns.
+
+- `FNN_LanguageModel.py`  
+  Feed-forward neural network predicting next-word probabilities.  
+  Compared 2-gram, 4-gram, and 8-gram architectures using perplexity metrics.
+
+<img src="Images/embeddings 4-gram.png" width="220"/>
+<img src="Images/perplexity.png" width="220"/>
+
+---
+
+### 🔹 Word Embeddings & Representation Learning
+
+- `Word2VecModels.py`  
+  Implemented **CBOW**, **Skip-gram**, and Stanford **GloVe** embeddings.  
+  Visualized embedding spaces using t-SNE.
+
+<img src="Images/CBOW_embeddings.png" width="240"/>
+
+- `Word2VecApplications.py`  
+  Applied optimized embeddings to AG_NEWS classification  
+  (Accuracy: **64.6%** over 10 epochs).
+
+---
+
+## 🔧 Tools & Libraries
+
+Python • PyTorch • NumPy • Matplotlib
+
+---
+
+## 📌 Context
+
+This module builds the NLP foundation within the  
+IBM AI Engineering Professional Certificate, supporting later work in 
+transformers, LLM alignment, and generative AI systems.
