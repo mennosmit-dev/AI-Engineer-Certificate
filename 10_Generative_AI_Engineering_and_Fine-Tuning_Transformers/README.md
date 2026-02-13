@@ -1,41 +1,79 @@
-# Course 10: Generative AI Engineering and Fine-Tuning Transformers
+# Generative AI Engineering & Fine-Tuning Transformers – Project Implementations
 
-This folder contains coursework and projects completed for the **[Generative AI Engineering and Fine-Tuning Transformers](https://www.coursera.org/learn/generative-ai-engineering-and-fine-tuning-transformers?specialization=ai-engineer)** course, part of the [IBM AI Engineer Professional Certificate](https://www.coursera.org/professional-certificates/ai-engineer) on Coursera.
+This folder contains transformer fine-tuning and generative AI engineering experiments developed during the  
+**IBM AI Engineering Professional Certificate**.
 
-## 🧠 Course Description
-
-This course focuses on the practical aspects of fine-tuning transformer-based large language models (LLMs) for generative AI applications. Learners gain hands-on experience with frameworks like Hugging Face and PyTorch to optimize and adapt pre-trained models efficiently.
-
-By the end of this course, you will be able to:
-
-- Perform parameter-efficient fine-tuning (PEFT) using techniques such as Low-Rank Adaptation (LoRA) and Quantized LoRA (QLoRA).
-- Utilize pre-trained transformers for language tasks and fine-tune them for specific applications.
-- Load models and perform inference using Hugging Face and PyTorch.
-- Understand and apply model quantization techniques to optimize performance.
+The focus of this module was parameter-efficient fine-tuning (PEFT), LoRA/QLoRA workflows, 
+and practical adaptation of pretrained LLMs using PyTorch and Hugging Face.
 
 ---
 
-## 📂 Contents: The coding projects I worked on
-- `hugging_face_models.py`: Loaded and utilised several hugging face models to manually and also via the pipeline function to perform sentiment classification (DistilBERT) and text generation (GPT-2). <br>
-<img src="Images/generation.png" alt="GPT-2" width="200"/> <img src="Images/sentiment.png" alt="DistilBERT" width="200"/> <br>
-- `llm_pretraining_huggingface.py`: Utilised several pre-trained LLMs (facebook/opt-350m, bert-scratch-model.pt, bert-base-uncased)  and self-supervised fine-tuned them on several of my data sets of my own choice manually (like wiki). Model showed a very distinct performance based on the perplexity measure.
-- `stateofart_pretrained_llm_finetuning.py`: Finetuned a BERT "bert-base-cased" and the "yelp review" dataset from pytorch, compared this to the huggingface SFFTtrainer with the "facebook/opt-350m" model and "timdettmers/openassistant-guanaco" dataset. Saw a similar performance when looking at generated chatbot text, which puts the favour in the second approach which was easier to implement for this use case. The first approach allowed for more control over internal processes which can also sometimes be preferred. <br>
- <img src="Images/BERT_pytorch_loss.png" alt="loss of the first pytorch model over time (more control over internal processes)" width="200"/> <br>
-- `adapters_classificaton_model.py`: Evaluated three methods for finetuning a model pretrained on AG News data set to classify film category on IMDB movie descriptions. Fine-tuning the full model was very time-consuming and led to 89% accuracy (2-3 hours), only the last layer was fast but only achieved 65% accuracy (2-3 minutes), finally the adapter-based model was relatively quick (12 minutes) and achieved an accuracy of 0.87.
-- `lora_sentiment_analysis.py`: Fine-tuned a PyTorch model with LoRA, first leveraging AG News pretraining, then adapted it to IMDB for sentiment analysis — achieving strong performance 92% accuracy on movie reviews.
----
+## 🧠 Overview
 
-## 🔧 Tools and Libraries
+Key areas explored:
 
-- Python
-- Jupyter Notebooks
-- PyTorch
-- Hugging Face Transformers
-- NumPy
-- Matplotlib
+- Parameter-efficient fine-tuning (LoRA, adapters)
+- Transformer inference and deployment workflows
+- Model quantization and optimization
+- Comparative fine-tuning strategies across datasets
+- Practical experimentation with pretrained LLMs
+
+These projects extend earlier transformer work toward applied LLM engineering and production-oriented workflows.
 
 ---
 
-## 📌 Certificate Series
+## 📂 Selected Implementations
 
-This is the tenth course in the [IBM AI Engineer Professional Certificate](https://www.coursera.org/professional-certificates/ai-engineer).
+### 🔹 Hugging Face Model Experiments
+
+- `hugging_face_models.py`  
+  Experimented with pretrained models for sentiment classification and text generation:
+
+  - DistilBERT (sentiment analysis)
+  - GPT-2 (text generation)
+
+<img src="Images/generation.png" width="220"/>
+<img src="Images/sentiment.png" width="220"/>
+
+---
+
+### 🔹 LLM Pretraining & Fine-Tuning
+
+- `llm_pretraining_huggingface.py`  
+  Fine-tuned multiple pretrained LLMs (facebook/opt-350m, bert-base-uncased, custom BERT)  
+  using self-supervised learning and evaluated performance via perplexity.
+
+- `stateofart_pretrained_llm_finetuning.py`  
+  Compared manual BERT fine-tuning vs Hugging Face SFTTrainer workflows.  
+  Demonstrated trade-offs between control and implementation efficiency.
+
+<img src="Images/BERT_pytorch_loss.png" width="240"/>
+
+---
+
+### 🔹 Parameter-Efficient Fine-Tuning
+
+- `adapters_classificaton_model.py`  
+  Compared full fine-tuning, last-layer training, and adapter-based approaches:
+
+  - Full model: 89% accuracy (~2–3 hours)
+  - Last layer: 65% accuracy (~minutes)
+  - Adapter model: 87% accuracy (~12 minutes)
+
+- `lora_sentiment_analysis.py`  
+  Applied LoRA fine-tuning on AG News → IMDB sentiment task.  
+  Achieved **92% accuracy**.
+
+---
+
+## 🔧 Tools & Libraries
+
+Python • PyTorch • Hugging Face Transformers • NumPy • Matplotlib
+
+---
+
+## 📌 Context
+
+This module represents the applied LLM fine-tuning component of the  
+IBM AI Engineering Professional Certificate and builds directly on earlier 
+transformer architecture work, leading into RLHF and RAG-based systems.
