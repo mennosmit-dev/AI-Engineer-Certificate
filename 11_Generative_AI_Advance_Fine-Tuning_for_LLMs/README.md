@@ -1,39 +1,68 @@
-# Course 11: Generative AI Advanced Fine-Tuning for LLMs
+# Generative AI Advanced Fine-Tuning for LLMs – Project Implementations
 
-This folder contains coursework and projects completed for the **[Generative AI Advanced Fine-Tuning for LLMs](https://www.coursera.org/learn/generative-ai-advanced-fine-tuning-for-llms?specialization=ai-engineer)** course, part of the [IBM AI Engineer Professional Certificate](https://www.coursera.org/professional-certificates/ai-engineer) on Coursera.
+This folder contains advanced LLM alignment and fine-tuning experiments developed during the  
+**IBM AI Engineering Professional Certificate**.
 
-## 🧠 Course Description
-
-This course delves into advanced techniques for fine-tuning large language models (LLMs), focusing on aligning models with specific business needs through human feedback and preference optimization. Learners gain hands-on experience with instruction-tuning, reward modeling, and reinforcement learning methods using Hugging Face tools.
-
-By the end of this course, you will be able to:
-
-- Implement instruction-tuning and reward modeling using Hugging Face.
-- Apply reinforcement learning from human feedback (RLHF) techniques, including proximal policy optimization (PPO) and direct preference optimization (DPO).
-- Utilize LLMs as policies for generating responses based on input text.
-- Calculate rewards using human feedback and train models to optimize performance.
+The focus of this module was aligning language models with human preferences using 
+reward modeling, reinforcement learning from human feedback (RLHF), and 
+direct preference optimization (DPO).
 
 ---
 
-## 📂 Contents: The coding projects I worked on (3 projects)
+## 🧠 Overview
 
-- `reward_modelling_gpt2.py`: Fine-tuned the GPT2 model to reward the quality of response of LLMs, which is used in the next script for Reinforcement Learning with Human Feedback (RLHF) (trained on "Dahoas/synthetic-instruct-gptj-pairwise" using LoRa). The final pairwise accuracy of the model was 71%.
-- `rlhf_ppo_sentiment.py`: Trained GPT-2 models with Reinforcement Learning from Human Feedback (RLHF) using PPO on the IMDb dataset to shape 'Happy' and 'Pessimistic' LLM behaviors for customer service scenarios. The models achieved 85% sentiment alignment with the target style.
-- `dpo_llm_alignment.py`: Fine-tuned large language models using Direct Preference Optimization (DPO) with Hugging Face’s trl library to better align outputs with human preferences. Implemented dataset preparation, training, and evaluation to improve model performance in real-world NLP tasks. <br>
- <img src="Images/loss dpo.png" alt="train and validation loss of the dpo model" width="200"/> <img src="Images/samples_dpo.png" alt="sample dpo" width="600"/> 
----
+Key areas explored:
 
-## 🔧 Tools and Libraries
+- Instruction tuning and reward modeling
+- Reinforcement Learning from Human Feedback (RLHF)
+- Proximal Policy Optimization (PPO) for language models
+- Direct Preference Optimization (DPO)
+- Preference-based alignment workflows using Hugging Face TRL
 
-- Python
-- Jupyter Notebooks
-- PyTorch
-- Hugging Face Transformers
-- NumPy
-- Matplotlib
+These projects extend earlier transformer fine-tuning work toward 
+behavioral alignment and policy optimization for generative AI systems.
 
 ---
 
-## 📌 Certificate Series
+## 📂 Selected Implementations
 
-This is the eleventh course in the [IBM AI Engineer Professional Certificate](https://www.coursera.org/professional-certificates/ai-engineer).
+### 🔹 Reward Modeling
+
+- `reward_modelling_gpt2.py`  
+  Fine-tuned GPT-2 as a reward model using LoRA on the  
+  **Dahoas/synthetic-instruct-gptj-pairwise** dataset.  
+  Achieved **71% pairwise accuracy**.
+
+---
+
+### 🔹 RLHF with PPO
+
+- `rlhf_ppo_sentiment.py`  
+  Applied PPO-based RLHF to steer GPT-2 behavior toward 
+  "Happy" vs "Pessimistic" conversational styles using IMDb data.  
+  Achieved **85% sentiment alignment**.
+
+---
+
+### 🔹 Direct Preference Optimization (DPO)
+
+- `dpo_llm_alignment.py`  
+  Implemented DPO-based alignment using Hugging Face TRL, 
+  including dataset preparation, training, and evaluation workflows.
+
+<img src="Images/loss dpo.png" width="240"/>
+<img src="Images/samples_dpo.png" width="520"/>
+
+---
+
+## 🔧 Tools & Libraries
+
+Python • PyTorch • Hugging Face Transformers • TRL • NumPy • Matplotlib
+
+---
+
+## 📌 Context
+
+This module represents the LLM alignment and reinforcement learning component 
+of the IBM AI Engineering Professional Certificate, bridging transformer fine-tuning 
+with reinforcement learning and production-oriented generative AI systems.
