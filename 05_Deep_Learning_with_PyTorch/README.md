@@ -4,7 +4,7 @@ This folder contains advanced deep learning implementations developed during the
 **IBM AI Engineering Professional Certificate**.
 
 The focus of this module was building practical PyTorch workflows for CNNs, 
-sequence models, transfer learning, and training optimization techniques.
+training optimization strategies, and architectural experimentation for image classification tasks.
 
 ---
 
@@ -13,14 +13,13 @@ sequence models, transfer learning, and training optimization techniques.
 Key areas explored:
 
 - Convolutional neural networks (CNNs) and feature extraction
-- Model initialization strategies and batch normalization
-- Regularization techniques (dropout, normalization)
-- Training optimization and architectural experimentation
-- Applied image classification using real-world datasets
+- Initialization strategies and training dynamics
+- Batch normalization and regularization
+- Training optimization and model comparison
+- Applied computer vision workflows
 
-Several smaller lab-style experiments were completed to build intuition around 
-PyTorch mechanics and training dynamics; only the more applied implementations 
-are highlighted below.
+Several smaller lab-style experiments were completed to build intuition 
+around PyTorch mechanics; only the more applied implementations are highlighted here.
 
 ---
 
@@ -40,17 +39,21 @@ are highlighted below.
 ### 🔹 Convolutional Neural Networks
 
 - `cnn_mnist.py`  
-  Two-layer CNN architecture achieving **95% accuracy** on MNIST.
+  Two-layer CNN achieving **95% accuracy**.
 
 - `cnn_mnist_batch.py`  
   CNN with batch normalization improving accuracy to **98%**.
 
 - `cnn_fashion_mnist.py`  
-  Fashion-MNIST classification with performance visualization.
+  Fashion-MNIST classification with training performance visualization.
+
+<img src="Images/fashion.png" width="220"/>
 
 - `cnn_anime.py`  
   Anime character classification using CNN architectures and LeakyReLU activations.  
   Achieved **100% accuracy** on controlled subsets.
+
+<img src="Images/anime.png" width="240"/>
 
 ---
 
