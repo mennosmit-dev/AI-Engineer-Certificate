@@ -4,7 +4,7 @@ This folder contains foundational machine learning projects completed as part of
 **IBM AI Engineer Professional Certificate**.  
 
 The focus here is on building strong practical intuition for classical ML algorithms, 
-model evaluation, feature engineering, and pipeline design — forming the statistical 
+model evaluation, feature engineering, and pipeline design, forming the statistical 
 and modeling foundation behind my applied ML and reinforcement learning work.
 
 ---
