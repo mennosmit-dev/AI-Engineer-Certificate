@@ -37,9 +37,7 @@ These projects establish the deep learning foundation supporting later work in r
 
 - `convolutionalnn_mnist`  
   CNN with two convolution + pooling blocks achieving **99.77% accuracy**.
-
-<img src="Images/mnist_cnn_example.png" width="220"/>
-
+  
 - `aviation_damage`  
   Aircraft damage classification using fine-tuned **VGG16** and **ResNet**.  
   Best validation accuracy: **68.8%**.  
