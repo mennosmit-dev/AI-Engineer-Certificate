@@ -14,14 +14,14 @@ using real-world classification tasks.
 Key areas explored:
 
 - Neural network fundamentals using PyTorch
-- Model training with SGD and optimization strategies
+- Optimization and training workflows
 - Custom datasets and DataLoader pipelines
 - Autograd mechanics and backpropagation
-- Regularization techniques and evaluation workflows
+- Regularization and evaluation techniques
 
 Several smaller lab-style experiments were completed to build intuition 
 around tensors, gradients, and optimization; only the more applied 
-implementations are highlighted here.
+implementations are highlighted below.
 
 ---
 
@@ -36,6 +36,10 @@ implementations are highlighted here.
 - `league_of_legends_outcome_prediction.py`  
   Logistic regression model predicting match outcomes from gameplay statistics.  
   Explored weight decay and optimization strategies.
+
+<img src="Images/ROC_test.png" width="200"/>
+<img src="Images/classification_report_test.png" width="260"/>
+<img src="Images/confusion_momentum_test.png" width="200"/>
 
 ---
 
