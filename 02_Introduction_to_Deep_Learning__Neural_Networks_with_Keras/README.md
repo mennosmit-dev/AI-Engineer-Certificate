@@ -3,22 +3,21 @@
 This folder contains deep learning implementations developed as part of the  
 **IBM AI Engineering Professional Certificate**.
 
-The focus of this module was building practical intuition for neural network design, training dynamics, and model evaluation using Keras with TensorFlow.
+The focus of this module was building practical intuition for neural network design, training dynamics, and evaluation using Keras with TensorFlow.
 
 ---
 
 ## 🧠 Overview
 
-Implemented and experimented with:
+Key areas explored:
 
 - Fully connected neural networks (dense architectures)
 - Convolutional neural networks (CNNs)
 - Basic transformer architectures
-- Regularization techniques (dropout, batch normalization, early stopping)
-- Hyperparameter tuning (learning rate, batch size, depth)
-- Model evaluation via accuracy, MSE, confusion matrices, and learning curves
+- Regularization techniques (dropout, batch normalization)
+- Hyperparameter tuning and model evaluation
 
-These projects strengthen the deep learning foundation supporting my later work in reinforcement learning, transformers, and production ML systems.
+These projects establish the deep learning foundation supporting later work in reinforcement learning, transformers, and applied ML systems.
 
 ---
 
@@ -27,33 +26,36 @@ These projects strengthen the deep learning foundation supporting my later work 
 ### 🔹 Neural Networks & Regression
 
 - `concrete_compressive_strength.py`  
-  Multi-layer dense network (ReLU + Adam) for regression.  
-  Validation MSE: **25.89** (90/10 train-validation split).
+  Multi-layer dense network for regression (Validation MSE: **25.89**).
 
 - `conventionalnn_mnist`  
-  Fully connected neural network for MNIST digit classification.  
-  Accuracy: **99.5%**.
+  Fully connected network achieving **99.5% accuracy** on MNIST.
 
 ---
 
 ### 🔹 Convolutional Neural Networks
 
 - `convolutionalnn_mnist`  
-  CNN with two convolution + pooling blocks.  
-  Accuracy: **99.77%**.
+  CNN with two convolution + pooling blocks achieving **99.77% accuracy**.
+
+<img src="Images/mnist_cnn_example.png" width="220"/>
 
 - `aviation_damage`  
   Aircraft damage classification using fine-tuned **VGG16** and **ResNet**.  
   Best validation accuracy: **68.8%**.  
-  Extended with image captioning using a pre-trained BLIP transformer.
+  Extended with caption generation using a BLIP transformer model.
+
+<img src="Images/boeing747.png" width="200"/>
+<img src="Images/crack.png" width="200"/>
+<img src="Images/captionandsummary.png" width="350"/>
 
 ---
 
 ### 🔹 Transformers
 
 - `transformer_seq2seq_translation`  
-  Custom sequence-to-sequence transformer for English → Spanish translation.  
-  Achieved 100% accuracy on a controlled benchmark dataset.
+  Sequence-to-sequence transformer for English → Spanish translation.  
+  Achieved **100% accuracy** on a controlled benchmark dataset.
 
 ---
 
@@ -66,4 +68,4 @@ Python • TensorFlow • Keras • NumPy • Matplotlib • Jupyter
 ## 📌 Context
 
 This module forms the deep learning foundation within the  
-IBM AI Engineering Professional Certificate and supports my broader work in reinforcement learning, LLM fine-tuning, and applied ML engineering.
+IBM AI Engineering Professional Certificate and supports later work in reinforcement learning, LLM systems, and production-oriented ML pipelines.
